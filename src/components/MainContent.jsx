@@ -38,7 +38,7 @@ export default function MainContent() {
                     Our Special Story
                 </h1>
                 <div className="text-2xl md:text-3xl text-purple-700 mb-8 relative z-10">
-                    Hey Cutiepie, you are<br />my<FlipWords words={['Friend, 'soulmate', 'Bestie', 'Best Friend , 'Everything]} className="text-nowrap" />
+                    Hey Cutiepie, you are<br />my<FlipWords words={['Friend ❤️', 'Soulmate 💕', 'Bestie 🤗', 'Best Friend 🌸', 'Everything 🌟']} className="text-nowrap" />
                 </div>
                 <motion.button
                     whileHover={{ scale: 1.05 }}
