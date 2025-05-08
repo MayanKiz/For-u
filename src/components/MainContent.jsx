@@ -12,7 +12,7 @@ export default function MainContent() {
     const [currentPage, setCurrentPage] = useState(0)
     const [selectedImage, setSelectedImage] = useState(null)
 
-    const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, 5))
+    const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, pages.length - 1))
     const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 0))
 
     const pages = [
@@ -38,7 +38,8 @@ export default function MainContent() {
                     Our Special Story
                 </h1>
                 <div className="text-2xl md:text-3xl text-purple-700 mb-8 relative z-10">
-                    Hey Cutiepie, you are<br />my<FlipWords words={['Friend ❤️', 'Soulmate 💕', 'Bestie 🤗', 'Best Friend 🌸', 'Everything 🌟']} className="text-nowrap" />
+                    Hey Cutiepie, you are<br />
+                    my <FlipWords words={['Friend ❤️', 'Soulmate 💕', 'Bestie 🤗', 'Best Friend 🌸', 'Everything 🌟']} className="text-nowrap" />
                 </div>
                 <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -57,27 +58,26 @@ export default function MainContent() {
             <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
                 {[
                     { date: 'September, 2024', event: 'Our Journey Began', emoji: '❤️' },
-                    { date: 'Science Exhibition', event: 'Fvt time spent with u ', emoji: '🎬' },
-                    { date: '3 September, 2023', event: 'The first day when our conversation happened ', emoji: '💬' },
+                    { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '🎬' },
+                    { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
                     { date: '5 January, 2023', event: 'First Trip Together', emoji: '🛺' },
-                    { date: 'Roj hoti rehti hai, event: 'First Fight ', emoji: '💬' },
-                    { date: 'Dance', event: 'First 'Topic of Conversation', emoji: '🤔' },
-                ]
-                    .map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.2 }}
-                            className="flex items-center space-x-4 bg-white p-4 rounded-xl shadow-md"
-                        >
-                            <span className="text-3xl">{item.emoji}</span>
-                            <div className='relative z-10'>
-                                <p className="font-medium text-gray-800">{item.event}</p>
-                                <p className="text-sm text-gray-500">{item.date}</p>
-                            </div>
-                        </motion.div>
-                    ))}
+                    { date: 'Many times', event: 'First Fight', emoji: '😅' },
+                    { date: 'Dance Event', event: 'First Topic of Conversation', emoji: '🤔' },
+                ].map((item, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.2 }}
+                        className="flex items-center space-x-4 bg-white p-4 rounded-xl shadow-md"
+                    >
+                        <span className="text-3xl">{item.emoji}</span>
+                        <div className='relative z-10'>
+                            <p className="font-medium text-gray-800">{item.event}</p>
+                            <p className="text-sm text-gray-500">{item.date}</p>
+                        </div>
+                    </motion.div>
+                ))}
             </div>
         </StoryPage>,
 
@@ -91,20 +91,14 @@ export default function MainContent() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <TimeCounter
-                            startDate="2019-10-23"
-                            label="As Friends"
-                        />
+                        <TimeCounter startDate="2019-10-23" label="As Friends" />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                        <TimeCounter
-                            startDate="2022-01-14"
-                            label="As a Couple"
-                        />
+                        <TimeCounter startDate="2022-01-14" label="As a Couple" />
                     </motion.div>
                 </div>
                 <motion.div
@@ -140,7 +134,6 @@ export default function MainContent() {
                             className="relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer"
                             onClick={() => setSelectedImage(i)}
                         >
-                            {/* If you want to show your pics then you can save your pics in public/images folder like this 1.jpg, 2.jpg, 3.jpg then replace the src to this - /images/${i}.jpg */}
                             <Image
                                 src={`https://images.pexels.com/photos/1759823/pexels-photo-1759823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
                                 alt={`Gallery image ${i}`}
@@ -160,11 +153,11 @@ export default function MainContent() {
             <div className="bg-white rounded-xl p-6 shadow-md overflow-y-auto flex-1 custom-scrollbar">
                 <div className="relative z-10">
                     <div className="text-gray-700 text-lg leading-relaxed mb-4">
-                        <p>From the very first moment our paths crossed, life has felt more beautiful, more exciting, and more meaningful. Every smile, every conversation, and every memory we've shared has built a story so precious that no words can truly capture it. I feel incredibly grateful to have someone like you by my side, someone who understands me without even saying a word, someone who brings light even on the darkest days. Through ups and downs, laughter and tears, you've been a constant source of strength and happiness. As we continue to write our journey together, I want you to always remember that you are deeply cherished, endlessly appreciated, and truly loved. Here's to the countless memories we've yet to create and the beautiful future that awaits us. You are, and always will be, my favorite part of every day.💖</p>
+                        <p>From the very first moment our paths crossed, life has felt more beautiful, more exciting, and more meaningful. Every smile, every conversation, and every memory we've shared has built a story so precious that no words can truly capture it. I feel incredibly grateful to have someone like you by my side, someone who understands me without even saying a word, someone who brings light even on the darkest days. Through ups and downs, laughter and tears, you've been a constant source of strength and happiness. As we continue to write our journey together, I want you to always remember that you are deeply cherished, endlessly appreciated, and truly loved. Here's to the countless memories we've yet to create and the beautiful future that awaits us. You are, and always will be, my favorite part of every day. 💖</p>
                     </div>
                     <p className="text-right text-rose-600 font-semibold">
                         Forever yours,<br />
-                        Your love❤️
+                        Your love ❤️
                     </p>
                 </div>
             </div>
@@ -197,7 +190,7 @@ export default function MainContent() {
     ]
 
     return (
-        <div className="relative w-full h-screen ">
+        <div className="relative w-full h-screen">
             <div className="absolute inset-0 flex items-center justify-center p-4">
                 <div className="w-full max-w-4xl h-[78vh] bg-white rounded-3xl shadow-question-card overflow-hidden relative flex items-center justify-center">
                     <motion.div
@@ -253,7 +246,6 @@ export default function MainContent() {
                         className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        {/* When showing your own pics replace image src with this - /images/${selectedImage}.jpg */}
                         <Image
                             src={`https://images.pexels.com/photos/1759823/pexels-photo-1759823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
                             alt={`Gallery image ${selectedImage}`}
@@ -268,4 +260,3 @@ export default function MainContent() {
         </div>
     )
 }
-
