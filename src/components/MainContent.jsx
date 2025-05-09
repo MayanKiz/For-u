@@ -62,7 +62,7 @@ export default function MainContent() {
                     { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
                     { date: '5 January, 2023', event: 'First Trip Together', emoji: '🛺' },
                     { date: 'Many times', event: 'First Fight', emoji: '😅' },
-                    { date: 'Dance Event On Teachers Day, event: 'First Topic of Conversation', emoji: '🤔' },
+                    { date: 'Dance Event On Teacher/'s Day', event: 'First Topic of Conversation', emoji: '🤔' },
                 ].map((item, index) => (
                     <motion.div
                         key={index}
