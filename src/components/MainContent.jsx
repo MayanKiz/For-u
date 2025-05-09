@@ -115,7 +115,7 @@ export default function MainContent() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                 >
-                    Every moment with you is a treasure!
+                    Every moment with you is a treasure....Dude....<3
                 </motion.p>
             </div>
         </StoryPage>,
