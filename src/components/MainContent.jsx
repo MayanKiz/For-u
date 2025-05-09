@@ -57,12 +57,12 @@ export default function MainContent() {
             <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our Journey</h2>
             <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
                 {[
-                    { date: 'September, 2024', event: 'Our Journey Began', emoji: '❤️' },
+                    { date: 'September, 2023', event: 'Our Journey Began', emoji: '❤️' },
                     { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '🎬' },
                     { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
                     { date: '5 January, 2023', event: 'First Trip Together', emoji: '🛺' },
                     { date: 'Many times', event: 'First Fight', emoji: '😅' },
-                    { date: 'Dance Event', event: 'First Topic of Conversation', emoji: '🤔' },
+                    { date: 'Dance Event On Teacher's Day, event: 'First Topic of Conversation', emoji: '🤔' },
                 ].map((item, index) => (
                     <motion.div
                         key={index}
