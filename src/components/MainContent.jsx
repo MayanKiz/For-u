@@ -91,7 +91,7 @@ export default function MainContent() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <TimeCounter startDate="2023-06-07" label="The first time I saw you Sir.... " />
+                        <TimeCounter startDate="2023-06-07" label="The first time I saw you Madam jii.... " />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
