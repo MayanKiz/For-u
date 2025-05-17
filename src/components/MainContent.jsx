@@ -58,7 +58,7 @@ export default function MainContent() {
             <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
                 {[
                     { date: 'September, 2023', event: 'Our Journey Began', emoji: '❤️' },
-                    { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '🎬' },
+                    { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '🫂' },
                     { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
                     { date: '5 January, 2025', event: 'First Trip Together', emoji: '🛺' },
                     { date: 'Many times', event: 'First Fight', emoji: '😅' },
