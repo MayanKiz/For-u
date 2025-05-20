@@ -84,44 +84,63 @@ export default function MainContent() {
         </StoryPage>,
 
         // Time Together Page
-        <StoryPage key="time" backgroundColor="bg-gradient-to-br from-pink-200 to-purple-200">
-            <div className="flex flex-col items-center justify-center h-full text-center px-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 relative z-10">Our Time Together</h2>
-                <div className="w-full max-w-md space-y-8">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                        <TimeCounter startDate="2023-05-06" label="The first time I saw you Madam jii.... " />
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                    >
-                        <TimeCounter startDate="2025-01-14" label="As a Best Friend" />
-                    </motion.div>
-                </div>
-                <motion.div
-                    className="mt-6"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                >
-                    <HeartIcon className="w-16 h-16 text-rose-500 mx-auto" />
-                </motion.div>
-                <motion.p
-                    className="text-lg md:text-xl text-blue-600 mt-5 relative z-10"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                >
-                    Every moment with you is a treasure....Dude....𖹭.....!
-                </motion.p>
-            </div>
-        </StoryPage>,
+<StoryPage key="time" backgroundColor="bg-gradient-to-br from-pink-200 to-purple-200">
+    <div className="flex flex-col items-center justify-center h-full text-center px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 relative z-10">Our Time Together</h2>
+        <div className="w-full max-w-md space-y-8">
+            <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+            >
+                <TimeCounter startDate="2023-05-06" label="The first time I saw you Madam jii.... " />
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+            >
+                <TimeCounter startDate="2025-01-14" label="As a Best Friend" />
+            </motion.div>
+        </div>
 
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="w-full max-w-md mt-8"
+        >
+            <div
+                className="cursor-pointer bg-gray-200 rounded-xl overflow-hidden shadow-lg"
+                onClick={() => setSelectedImage('specialVideo')}
+            >
+                <video muted autoPlay loop className="w-full h-auto">
+                    <source src="/audio/lv_7340057311542578438_20250508141937.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <p className="text-center text-blue-600 mt-4 text-base md:text-lg">
+                7 continents. 196 countries. Billions of people... <br /> and I’m lucky to find <b>you</b>.
+            </p>
+        </motion.div>
+
+        <motion.div
+            className="mt-6"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+        >
+            <HeartIcon className="w-16 h-16 text-rose-500 mx-auto" />
+        </motion.div>
+        <motion.p
+            className="text-lg md:text-xl text-blue-600 mt-5 relative z-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+        >
+            Every moment with you is a treasure....Dude....𖹭.....!
+        </motion.p>
+    </div>
+</StoryPage>
         // Photo Gallery Page
         <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
             <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Memorable Moments</h2>
