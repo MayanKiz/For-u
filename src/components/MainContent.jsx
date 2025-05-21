@@ -283,12 +283,7 @@ export default function MainContent() {
               className="relative bg-white rounded-2xl p-4 shadow-2xl w-[95vw] max-w-xl"
               onClick={e => e.stopPropagation()}
             >
-              <button
-                className="absolute top-4 right-4 p-2 rounded-full bg-pink-100 hover:bg-pink-200"
-                onClick={() => setShowVideo(false)}
-              >
-                <X className="text-pink-500" />
-              </button>
+           
               <video
                 src="/audio/lv_7340057311542578438_20250508141937.mp4"
                 controls
@@ -297,7 +292,7 @@ export default function MainContent() {
                 onEnded={() => setShowVideo(false)}
               />
               <div className="mt-4 text-center text-lg font-medium text-blue-700">
-                There are 7 continents, 196 countries, billions of people, and I am lucky to find you.
+                ❤️‍🩹
               </div>
             </motion.div>
           </motion.div>
