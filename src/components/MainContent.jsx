@@ -137,10 +137,10 @@ export default function MainContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
         >
-            Every moment with you is a treasure....Dude....𖹭.....!
+            Every moment with you is a treasure....Dude 𖹭!
         </motion.p>
     </div>
-</StoryPage>
+</StoryPage>,
         // Photo Gallery Page
         <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
             <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Memorable Moments</h2>
