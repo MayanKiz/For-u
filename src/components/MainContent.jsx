@@ -244,14 +244,14 @@ export default function MainContent() {
       <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
       <div className="flex flex-col gap-4">
         <div className="p-4 bg-white shadow-md rounded-2xl">
-          <p className="font-medium text-gray-700 mb-2">Priyanshi saying sorry (pyar se):</p>
+          <p className="font-medium text-gray-700 mb-2">Aammm ....❤️‍🩹🎶:</p>
           <audio controls className="w-full">
             <source src="/audio/audio_7692124805 (2).mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
         <div className="p-4 bg-white shadow-md rounded-2xl">
-          <p className="font-medium text-gray-700 mb-2">Priyanshi's Singing:</p>
+          <p className="font-medium text-gray-700 mb-2">Aaye haye... Yahn mai pighal gya☺️:</p>
           <audio controls className="w-full">
             <source src="/audio/v2m-c8yddJxfZ0Tka.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
