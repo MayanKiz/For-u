@@ -6,27 +6,28 @@ export default function Loader({ onFinish }) {
     const [started, setStarted] = useState(false);
     const audioRef = useRef(null);
 
-    // Button click par ye function chalega
     const handleStart = () => {
         setStarted(true);
-        // Sound play
+        // Sound play & loop
         if (audioRef.current) {
             audioRef.current.currentTime = 0;
+            audioRef.current.loop = true;
             audioRef.current.play().catch(() => {});
         }
-        // Loader finish karna (1.3 second baad aage badho)
+        // Loader finish karna (1.2 second baad aage badho)
         setTimeout(() => {
             onFinish();
-        }, 130); // 1.3s ke liye loader dikhayega
+        }, 1200);
     };
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center">
-            {/* Sound for loader */}
+            {/* Instrumental music, loop enabled */}
             <audio
                 ref={audioRef}
                 src="/audio/instrumental.mp3"
                 preload="auto"
+                loop
             />
             <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
@@ -48,7 +49,6 @@ export default function Loader({ onFinish }) {
                     Start
                 </motion.button>
             ) : (
-                // Loader animation jab button dab chuka
                 <div className="w-64 h-2 bg-pink-200 rounded-full mt-6 overflow-hidden">
                     <motion.div
                         className="h-full bg-pink-500"
