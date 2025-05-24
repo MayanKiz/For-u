@@ -1,34 +1,28 @@
-import { useState, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Heart } from 'lucide-react'
 
 export default function Loader({ onFinish }) {
-    const [started, setStarted] = useState(false);
-    const audioRef = useRef(null);
+    const [progress, setProgress] = useState(0)
 
-    const handleStart = () => {
-        setStarted(true);
-        // Sound play & loop
-        if (audioRef.current) {
-            audioRef.current.currentTime = 0;
-            audioRef.current.loop = true;
-            audioRef.current.play().catch(() => {});
-        }
-        // Loader finish karna (1.2 second baad aage badho)
-        setTimeout(() => {
-            onFinish();
-        }, 1200);
-    };
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress(prev => {
+                if (prev >= 100) {
+                    clearInterval(timer)
+                    setTimeout(() => {
+                        onFinish();
+                    }, 100);
+                    return 100
+                }
+                return prev + 1
+            })
+        }, 40)
+        return () => clearInterval(timer)
+    }, [onFinish])
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center">
-            {/* Instrumental music, loop enabled */}
-            <audio
-                ref={audioRef}
-                src="/audio/instrumental.mp3"
-                preload="auto"
-                loop
-            />
             <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ repeat: Infinity, duration: 0.8 }}
@@ -36,28 +30,15 @@ export default function Loader({ onFinish }) {
                 <Heart className="w-20 h-20 text-pink-500" fill="currentColor" />
             </motion.div>
             <p className="mt-4 text-xl font-medium text-center px-4 text-gradient">
-                Take a deep breath, my Friend. A special surprise awaits you...
+                Take a deep breath, my Friend. A special surprise awaits you......
             </p>
-            {/* Button ya Progress */}
-            {!started ? (
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-pink-500 text-white px-6 py-3 rounded-full text-lg shadow-btn hover:bg-pink-600 transition-colors duration-300 mt-8"
-                    onClick={handleStart}
-                >
-                    Start
-                </motion.button>
-            ) : (
-                <div className="w-64 h-2 bg-pink-200 rounded-full mt-6 overflow-hidden">
-                    <motion.div
-                        className="h-full bg-pink-500"
-                        initial={{ width: 0 }}
-                        animate={{ width: "100%" }}
-                        transition={{ duration: 1.2 }}
-                    />
-                </div>
-            )}
+            <div className="w-64 h-2 bg-pink-200 rounded-full mt-4 overflow-hidden">
+                <motion.div
+                    className="h-full bg-pink-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${progress}%` }}
+                />
+            </div>
         </div>
     )
 }
