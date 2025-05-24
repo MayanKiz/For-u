@@ -130,7 +130,7 @@ export default function MainContent() {
 
     // Photo Gallery Page
 
-  <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
+<StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
   <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Photo Gallery</h2>
   <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
 
@@ -153,10 +153,9 @@ export default function MainContent() {
           >
             <Image
               src={`/audio/${img}`}
-              alt={`Scribbled Day ${i + 1}`}
+              alt=""
               width={330}
               height={330}
-              onError={(e) => (e.target.style.display = "none")}
               className="rounded-2xl object-cover h-full w-full"
             />
           </motion.div>
@@ -164,7 +163,7 @@ export default function MainContent() {
       </div>
     </div>
 
-    {/* Group Photo */}
+    {/* Class Group Photo */}
     <div>
       <h3 className="text-xl font-semibold text-green-600 mb-2">Class Group Photo</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -177,10 +176,9 @@ export default function MainContent() {
         >
           <Image
             src="/audio/20250524_092203.jpg"
-            alt="Group Photo"
+            alt=""
             width={440}
             height={330}
-            onError={(e) => (e.target.style.display = "none")}
             className="rounded-2xl object-cover h-full w-full"
           />
         </motion.div>
@@ -200,10 +198,9 @@ export default function MainContent() {
         >
           <Image
             src="/audio/SmartSelect_20250525_012951_Photos.jpg"
-            alt="Science Exhibition"
+            alt=""
             width={440}
             height={330}
-            onError={(e) => (e.target.style.display = "none")}
             className="rounded-2xl object-cover h-full w-full"
           />
         </motion.div>
@@ -232,10 +229,9 @@ export default function MainContent() {
           >
             <Image
               src={`/audio/${img}`}
-              alt={`Favourite Photo ${i + 1}`}
+              alt=""
               width={330}
               height={330}
-              onError={(e) => (e.target.style.display = "none")}
               className="rounded-2xl object-cover h-full w-full"
             />
           </motion.div>
@@ -251,7 +247,7 @@ export default function MainContent() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
+        className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-90"
         onClick={() => setSelectedImage(null)}
       >
         <motion.div
@@ -261,12 +257,9 @@ export default function MainContent() {
           className="bg-white rounded-2xl p-2 shadow-2xl w-[95vw] max-w-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          <Image
+          <img
             src={selectedImage}
             alt="Selected"
-            width={800}
-            height={600}
-            onError={(e) => (e.target.style.display = "none")}
             className="w-full rounded-xl object-contain"
           />
         </motion.div>
