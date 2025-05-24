@@ -341,7 +341,7 @@ export default function MainContent() {
       {/* Background music, always looping after user clicks "Open Our Story" */}
       <audio
         ref={audioRef}
-        src="/audio/instrumental.mp3"
+        src="/audio/Malang_Sajna.mp3"
         preload="auto"
         style={{ display: "none" }}
       />
