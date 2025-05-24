@@ -1,11 +1,18 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Heart } from 'lucide-react'
 
 export default function Loader({ onFinish }) {
     const [progress, setProgress] = useState(0)
+    const audioRef = useRef(null);
 
     useEffect(() => {
+        // Loader start hote hi sound bajao
+        if (audioRef.current) {
+            audioRef.current.currentTime = 0;
+            audioRef.current.play().catch(() => {}); // autoplay policy ke liye error suppress
+        }
+
         const timer = setInterval(() => {
             setProgress(prev => {
                 if (prev >= 100) {
@@ -23,6 +30,12 @@ export default function Loader({ onFinish }) {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center">
+            {/* Sound for loader */}
+            <audio
+                ref={audioRef}
+                src="public/audio/instrumental.mp3"
+                preload="auto"
+            />
             <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ repeat: Infinity, duration: 0.8 }}
