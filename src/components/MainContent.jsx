@@ -148,7 +148,8 @@ export default function MainContent() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: i * 0.12 }}
-            className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
+            className="relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer"
+            onClick={() => setSelectedImage(`/audio/${img}`)}
           >
             <Image
               src={`/audio/${img}`}
@@ -170,7 +171,8 @@ export default function MainContent() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md"
+          className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer"
+          onClick={() => setSelectedImage("/audio/20250524_092203.jpg")}
         >
           <Image
             src="/audio/20250524_092203.jpg"
@@ -183,7 +185,7 @@ export default function MainContent() {
       </div>
     </div>
 
-    {/* Science Exhibition (image replaced) */}
+    {/* Science Exhibition Image (instead of video) */}
     <div>
       <h3 className="text-xl font-semibold text-blue-600 mb-2">Science Exhibition</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -191,7 +193,8 @@ export default function MainContent() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.12 }}
-          className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md"
+          className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
+          onClick={() => setSelectedImage("/audio/SmartSelect_20250525_012951_Photos.jpg")}
         >
           <Image
             src="/audio/SmartSelect_20250525_012951_Photos.jpg"
@@ -221,7 +224,8 @@ export default function MainContent() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: i * 0.13 }}
-            className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
+            className="relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer"
+            onClick={() => setSelectedImage(`/audio/${img}`)}
           >
             <Image
               src={`/audio/${img}`}
@@ -234,8 +238,36 @@ export default function MainContent() {
         ))}
       </div>
     </div>
-
   </div>
+
+  {/* IMAGE MODAL */}
+  <AnimatePresence>
+    {selectedImage && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
+        onClick={() => setSelectedImage(null)}
+      >
+        <motion.div
+          initial={{ scale: 0.9 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.9 }}
+          className="bg-white rounded-2xl p-2 shadow-2xl w-[95vw] max-w-2xl"
+          onClick={e => e.stopPropagation()}
+        >
+          <Image
+            src={selectedImage}
+            alt="Selected"
+            width={800}
+            height={600}
+            className="w-full rounded-xl object-contain"
+          />
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
 </StoryPage>,
 
     // Letter page
