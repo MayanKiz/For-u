@@ -246,7 +246,7 @@ export default function MainContent() {
           <video 
             src="/audio/lv_7157122964440370438_20241226090023.mp4"
             poster="/audio/1736534240500.jpg"
-            className="object-cover w-full h-full rounded-2xl"
+            <div className="w-full max-w-4xl h-[78vh] bg-white rounded-3xl shadow-question-card overflow-y-auto relative flex items-center justify-center">
             preload="metadata"
             muted
           />
