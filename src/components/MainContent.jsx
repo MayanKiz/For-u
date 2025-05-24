@@ -287,7 +287,7 @@ export default function MainContent() {
       </motion.div>
     )}
   </AnimatePresence>
-</StoryPage>
+</StoryPage>,
 
     // Letter page
     <StoryPage key="letter" backgroundColor="bg-gradient-to-br from-blue-200 to-gray-200">
