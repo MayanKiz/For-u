@@ -148,7 +148,7 @@ export default function MainContent() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: i * 0.12 }}
-            className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
+            className="relative aspect-square rounded-2xl overflow-y-auto shadow-md"
           >
             <Image
               src={`/audio/${img}`}
@@ -170,7 +170,7 @@ export default function MainContent() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md"
+          className="relative aspect-[4/3] rounded-2xl overflow-y-auto shadow-md"
         >
           <Image
             src="/audio/20250524_092203.jpg"
@@ -223,7 +223,7 @@ export default function MainContent() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: i * 0.13 }}
-            className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
+            className="relative aspect-square rounded-2xl overflow-y-auto shadow-md"
           >
             <Image
               src={`/audio/${img}`}
@@ -240,7 +240,7 @@ export default function MainContent() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
+          className="relative aspect-video rounded-2xl overflow-y-auto shadow-md cursor-pointer"
           onClick={() => setSelectedImage("favVideo")}
         >
           <video 
