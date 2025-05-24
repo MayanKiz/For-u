@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useEffect, useState } from 'react'
 // ...baaki imports
 
@@ -38,7 +40,7 @@ export default function MainContent() {
   )
 }
 
-'use client'
+
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
