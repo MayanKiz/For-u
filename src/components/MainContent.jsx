@@ -129,7 +129,6 @@ export default function MainContent() {
     </StoryPage>,
 
     // Photo Gallery Page
-
 <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
   <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Photo Gallery</h2>
   <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
@@ -153,7 +152,7 @@ export default function MainContent() {
           >
             <Image
               src={`/audio/${img}`}
-              alt=""
+              alt={`Scribbled Day ${i + 1}`}
               width={330}
               height={330}
               className="rounded-2xl object-cover h-full w-full"
@@ -176,7 +175,7 @@ export default function MainContent() {
         >
           <Image
             src="/audio/20250524_092203.jpg"
-            alt=""
+            alt="Group Photo"
             width={440}
             height={330}
             className="rounded-2xl object-cover h-full w-full"
@@ -185,7 +184,7 @@ export default function MainContent() {
       </div>
     </div>
 
-    {/* Science Exhibition */}
+    {/* Science Exhibition Image */}
     <div>
       <h3 className="text-xl font-semibold text-blue-600 mb-2">Science Exhibition</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -198,7 +197,7 @@ export default function MainContent() {
         >
           <Image
             src="/audio/SmartSelect_20250525_012951_Photos.jpg"
-            alt=""
+            alt="Science Exhibition"
             width={440}
             height={330}
             className="rounded-2xl object-cover h-full w-full"
@@ -212,7 +211,7 @@ export default function MainContent() {
       <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {[
-          "1736534240500.jpg",
+             "1736534240500.jpg",
           "IMG-20250326-WA0002.jpg",
           "IMG-20250326-WA0003.jpg",
           "IMG_20241107_005917_769.jpg",       
@@ -229,13 +228,34 @@ export default function MainContent() {
           >
             <Image
               src={`/audio/${img}`}
-              alt=""
+              alt={`Favourite Photo ${i + 1}`}
               width={330}
               height={330}
               className="rounded-2xl object-cover h-full w-full"
             />
           </motion.div>
         ))}
+      </div>
+    </div>
+
+    {/* Voice Memories */}
+    <div>
+      <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
+      <div className="flex flex-col gap-4">
+        <div className="p-4 bg-white shadow-md rounded-2xl">
+          <p className="font-medium text-gray-700 mb-2">Priyanshi saying sorry (pyar se):</p>
+          <audio controls className="w-full">
+            <source src="/audio/audio_7692124805 (2).mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div className="p-4 bg-white shadow-md rounded-2xl">
+          <p className="font-medium text-gray-700 mb-2">Priyanshi's Singing:</p>
+          <audio controls className="w-full">
+            <source src="/audio/v2m-c8yddJxfZ0Tka.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
       </div>
     </div>
   </div>
@@ -247,7 +267,7 @@ export default function MainContent() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-90"
+        className="fixed inset-0 z-[999] flex items-center justify-center bg-black bg-opacity-90"
         onClick={() => setSelectedImage(null)}
       >
         <motion.div
@@ -255,18 +275,20 @@ export default function MainContent() {
           animate={{ scale: 1 }}
           exit={{ scale: 0.9 }}
           className="bg-white rounded-2xl p-2 shadow-2xl w-[95vw] max-w-2xl"
-          onClick={(e) => e.stopPropagation()}
+          onClick={e => e.stopPropagation()}
         >
-          <img
+          <Image
             src={selectedImage}
             alt="Selected"
+            width={800}
+            height={600}
             className="w-full rounded-xl object-contain"
           />
         </motion.div>
       </motion.div>
     )}
   </AnimatePresence>
-</StoryPage>,
+</StoryPage>
 
     // Letter page
     <StoryPage key="letter" backgroundColor="bg-gradient-to-br from-blue-200 to-gray-200">
@@ -368,7 +390,7 @@ export default function MainContent() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={`https://images.pexels.com/photos/1759823/pexels-photo-1759823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
+              src={`https://imag823/pexels-photo-1759823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
               alt={`Gallery image ${selectedImage}`}
               width={300}
               height={250}
