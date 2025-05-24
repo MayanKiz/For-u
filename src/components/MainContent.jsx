@@ -129,31 +129,165 @@ export default function MainContent() {
     </StoryPage>,
 
     // Photo Gallery Page
+
     <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
-      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Memorable Moments</h2>
-      <div className="flex-1 rounded-2xl overflow-y-auto overflow-x-hidden custom-scrollbar">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 rounded-2xl">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage(i)}
-            >
-              <Image
-                src={`https://images.pexels.com/photos/1759823/pexels-photo-1759823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
-                alt={`Gallery image ${i}`}
-                width={330}
-                height={270}
-                className="rounded-2xl object-cover h-full"
-              />
-            </motion.div>
-          ))}
-        </div>
+  <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Photo Gallery</h2>
+  <div className="flex flex-col gap-8">
+
+    {/* Scribbled Day */}
+    <div>
+      <h3 className="text-xl font-semibold text-pink-600 mb-2">Scribbled Day</h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {[
+          "1738831009732.jpg",
+          "1738831281977.jpg",
+          "1738833028885.jpg"
+        ].map((img, i) => (
+          <motion.div
+            key={img}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: i * 0.12 }}
+            className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
+          >
+            <Image
+              src={`/audio/${img}`}
+              alt={`Scribbled Day ${i + 1}`}
+              width={330}
+              height={330}
+              className="rounded-2xl object-cover h-full w-full"
+            />
+          </motion.div>
+        ))}
       </div>
-    </StoryPage>,
+    </div>
+
+    {/* Group Photo */}
+    <div>
+      <h3 className="text-xl font-semibold text-green-600 mb-2">Class Group Photo</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md"
+        >
+          <Image
+            src="/audio/20250524_092203.jpg"
+            alt="Group Photo"
+            width={440}
+            height={330}
+            className="rounded-2xl object-cover h-full w-full"
+          />
+        </motion.div>
+      </div>
+    </div>
+
+    {/* Science Exhibition */}
+    <div>
+      <h3 className="text-xl font-semibold text-blue-600 mb-2">Science Exhibition</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.12 }}
+          className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
+          onClick={() => setSelectedImage("scienceExhibition")}
+        >
+          <video 
+            src="/audio/lv_7157122964440370438_20241226090023.mp4"
+            poster="/audio/20250524_092203.jpg"
+            className="object-cover w-full h-full rounded-2xl"
+            preload="metadata"
+            muted
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+            <span className="text-white text-3xl font-bold">▶</span>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+
+    {/* Favourite Photos */}
+    <div>
+      <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {[
+          "1736534240500.jpg",
+          "IMG-20250326-WA0002.jpg",
+          "IMG-20250326-WA0003.jpg",
+          "IMG_20241107_005917_769.jpg"
+        ].map((img, i) => (
+          <motion.div
+            key={img}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: i * 0.13 }}
+            className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
+          >
+            <Image
+              src={`/audio/${img}`}
+              alt={`Favourite Photo ${i + 1}`}
+              width={330}
+              height={330}
+              className="rounded-2xl object-cover h-full w-full"
+            />
+          </motion.div>
+        ))}
+        {/* Video in favourite section */}
+        <motion.div
+          key="fav-video"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
+          onClick={() => setSelectedImage("favVideo")}
+        >
+          <video 
+            src="/audio/lv_7157122964440370438_20241226090023.mp4"
+            poster="/audio/1736534240500.jpg"
+            className="object-cover w-full h-full rounded-2xl"
+            preload="metadata"
+            muted
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+            <span className="text-white text-3xl font-bold">▶</span>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  </div>
+
+  {/* VIDEO MODAL for Science Exhibition or Fav Video */}
+  <AnimatePresence>
+    {(selectedImage === "favVideo" || selectedImage === "scienceExhibition") && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90"
+        onClick={() => setSelectedImage(null)}
+      >
+        <motion.div
+          initial={{ scale: 0.9 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.9 }}
+          className="bg-white rounded-2xl p-2 shadow-2xl w-[95vw] max-w-2xl"
+          onClick={e => e.stopPropagation()}
+        >
+          <video
+            src="/audio/lv_7157122964440370438_20241226090023.mp4"
+            controls
+            autoPlay
+            className="w-full rounded-xl"
+            onEnded={() => setSelectedImage(null)}
+          />
+          <div className="mt-2 text-center text-blue-600 font-semibold">Science Exhibition / Favourite Video</div>
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</StoryPage>
 
     // Letter page
     <StoryPage key="letter" backgroundColor="bg-gradient-to-br from-blue-200 to-gray-200">
