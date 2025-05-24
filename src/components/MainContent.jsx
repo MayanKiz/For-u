@@ -217,7 +217,7 @@ export default function MainContent() {
           "IMG-20250326-WA0003.jpg",
           "IMG_20241107_005917_769.jpg",
           "FreeFire_05_23_2025 17_08_25.png",
-          "FreeFire_05_23_2025 17_08_11.png"
+          "public/audio/AfCFcgOYosBlnxfCjybnUoswLnndhwXJAbodO5vFcgo65wDhPLDHh9oaZqxCMjI.mp4"
         ].map((img, i) => (
           <motion.div
             key={img}
