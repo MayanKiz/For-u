@@ -156,6 +156,7 @@ export default function MainContent() {
               alt={`Scribbled Day ${i + 1}`}
               width={330}
               height={330}
+              onError={(e) => (e.target.style.display = "none")}
               className="rounded-2xl object-cover h-full w-full"
             />
           </motion.div>
@@ -179,13 +180,14 @@ export default function MainContent() {
             alt="Group Photo"
             width={440}
             height={330}
+            onError={(e) => (e.target.style.display = "none")}
             className="rounded-2xl object-cover h-full w-full"
           />
         </motion.div>
       </div>
     </div>
 
-    {/* Science Exhibition Image (instead of video) */}
+    {/* Science Exhibition */}
     <div>
       <h3 className="text-xl font-semibold text-blue-600 mb-2">Science Exhibition</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -201,6 +203,7 @@ export default function MainContent() {
             alt="Science Exhibition"
             width={440}
             height={330}
+            onError={(e) => (e.target.style.display = "none")}
             className="rounded-2xl object-cover h-full w-full"
           />
         </motion.div>
@@ -232,6 +235,7 @@ export default function MainContent() {
               alt={`Favourite Photo ${i + 1}`}
               width={330}
               height={330}
+              onError={(e) => (e.target.style.display = "none")}
               className="rounded-2xl object-cover h-full w-full"
             />
           </motion.div>
@@ -255,13 +259,14 @@ export default function MainContent() {
           animate={{ scale: 1 }}
           exit={{ scale: 0.9 }}
           className="bg-white rounded-2xl p-2 shadow-2xl w-[95vw] max-w-2xl"
-          onClick={e => e.stopPropagation()}
+          onClick={(e) => e.stopPropagation()}
         >
           <Image
             src={selectedImage}
             alt="Selected"
             width={800}
             height={600}
+            onError={(e) => (e.target.style.display = "none")}
             className="w-full rounded-xl object-contain"
           />
         </motion.div>
