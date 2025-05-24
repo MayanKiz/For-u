@@ -17,7 +17,7 @@ export default function Loader({ onFinish }) {
         // Loader finish karna (1.3 second baad aage badho)
         setTimeout(() => {
             onFinish();
-        }, 1300000); // 1.3s ke liye loader dikhayega
+        }, 130); // 1.3s ke liye loader dikhayega
     };
 
     return (
