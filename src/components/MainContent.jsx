@@ -131,7 +131,7 @@ export default function MainContent() {
     // Photo Gallery Page
 
 <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
-  <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Photo Gallery</h2>
+  <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Boss Girl Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
   <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
 
     {/* Scribbled Day */}
