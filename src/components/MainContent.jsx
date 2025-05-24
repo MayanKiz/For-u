@@ -1,3 +1,43 @@
+import { useRef, useEffect, useState } from 'react'
+// ...baaki imports
+
+export default function MainContent() {
+  const audioRef = useRef(null)
+  const [musicStarted, setMusicStarted] = useState(false);
+
+  useEffect(() => {
+    if (musicStarted && audioRef.current) {
+      audioRef.current.loop = true;
+      audioRef.current.volume = 0.4; // Adjust as you like
+      audioRef.current.play().catch(() => {});
+    }
+  }, [musicStarted]);
+
+  // ...aapka pehla useState rehne dein
+  // ...rest of your logic
+
+  // FIRST PAGE par button ya anywhere user click kare to music chalu ho:
+  // Jaise aapke "Open Our Story" wale button ka onClick:
+  // onClick={() => { nextPage(); setMusicStarted(true); }}
+
+  // Rest of aapka pages array, logic, etc.
+
+  return (
+    <>
+      <audio
+        ref={audioRef}
+        src="/audio/instrumental.mp3"
+        preload="auto"
+        style={{ display: "none" }}
+      />
+      {/* Baaki pura aapka existing JSX as it is */}
+      <div className="relative w-full h-screen">
+        {/* ...your code */}
+      </div>
+    </>
+  )
+}
+
 'use client'
 
 import { useState } from 'react'
