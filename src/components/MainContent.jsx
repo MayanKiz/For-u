@@ -74,8 +74,10 @@ export default function MainContent() {
           { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '💝' },
           { date: '5 Jan sharp 12 AM on My Day', event: 'Phli wish tumhri thii', emoji: '🎂' },
           { date: '5 January, 2025', event: 'First Trip Together', emoji: '🛺' },
-          { date: 'Many times', event: ' Fights', emoji: '😅' },
-        ].map((item, index) => (
+          
+{ date: 'Kai baar', event: 'Ladaaiyaan hoti thi… par har baar manata bhi main hi tha', emoji: '🙃' },
+{ date: '24 May, 2025', event: 'Us din sab khatam ho gaya.... dosti bhi aur baat bhi. Shayad uske liye main kuch nahi tha. Par main aaj bhi wahi hoon… bas ab chup ho gaya hoon.', emoji: '🖤' },
+   ].map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -50 }}
