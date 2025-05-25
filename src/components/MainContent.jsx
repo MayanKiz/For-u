@@ -37,7 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://images.pexels.com/photos/32247464/pexels-photo-32247464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/32253377/pexels-photo-32253377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Heart icon"
             priority={true}
             width={176}
@@ -304,11 +304,11 @@ export default function MainContent() {
           <div className="text-gray-700 text-lg leading-relaxed mb-4">
             <p>From the very first moment our paths crossed, life has felt more beautiful, more exciting, and more meaningful. Every smile, every conversation, and every memory we've shared has built a story so precious that no words can truly capture it. I feel incredibly grateful to have someone like you by my side, someone who understands me without even saying a word, someone who brings light even on the darkest days. Through ups and downs, laughter and tears, you've been a constant source of strength and happiness. As we continue to write our journey together, I want you to always remember that you are deeply cherished, endlessly appreciated...... 💖
 
-And yes, whatever has been written on this website is a picture of those moments when you were a beautiful part of my life - my bestie, my own. Today circumstances have changed, so has our relationship.... Maybe now we are not the same as we used to be. If anywhere on this site I remembered you as 'Bestie', 'Forever Friend' or any such word, which you do not like today... then I seek forgiveness from the bottom of my heart for that. Every word was true at that time, but with the passage of time their meaning also changed. That's all I have to say - intentions were never bad .</p>
+</p>
           </div>
           <p className="text-right text-rose-600 font-semibold">
-            Apka Classmate,<br />
-            Mayank❤️
+            From,<br />
+            Your Billu😺🩵
           </p>
         </div>
       </div>
