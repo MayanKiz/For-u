@@ -37,7 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://www.pexels.com/photo/32247464/?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src=""https://images.pexels.com/photos/32247464/pexels-photo-32247464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Heart icon"
             priority={true}
             width={176}
