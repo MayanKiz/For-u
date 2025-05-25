@@ -250,7 +250,7 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
           <div className="flex flex-col gap-4">
             <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2"Yaarrr........❤️‍🩹:</p>
+              <p className="font-medium text-gray-700 mb-2">Yaarrr........❤️‍🩹:</p>
               <audio controls className="w-full">
                 <source src="/audio/audio_7692124805 (2).mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
