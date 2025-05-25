@@ -37,7 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://images.pexels.com/photos/32253377/pexels-photo-32253377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://images.pexels.com/photos/32253643/pexels-photo-32253643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Heart icon"
             priority={true}
             width={176}
@@ -63,38 +63,7 @@ export default function MainContent() {
       </div>
     </StoryPage>,
 
-    // Our Journey Page
-    <StoryPage key="journey" backgroundColor="bg-gradient-to-br from-blue-200 to-green-200">
-      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our Journey</h2>
-      <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
-        {[
-          { date: 'September, 2023', event: 'Our Journey Began', emoji: '❤️' },
-          { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
-          { date: 'Dance Event on Teachers Day', event: 'First Topic of Conversation', emoji: '🤔' },
-          { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '💝' },
-          { date: '5 Jan sharp 12 AM on My Day', event: 'Phli wish tumhri thii', emoji: '🎂' },
-          { date: '5 January, 2025', event: 'First Trip Together', emoji: '🛺' },
-          
-{ date: 'Bahut hoti thi… par har baar manaleta tha', event: 'Ladaaiyaan ', emoji: '🙃' },
-{ date: 'Is din sab khatam ho gaya.... dosti bhi aur baat bhi.. Shayad Apke liye main kuch nahi tha....', event: '24 May, 2025', emoji: '🖤' },
-   ].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.2 }}
-            className="flex items-center space-x-4 bg-white p-4 rounded-xl shadow-md"
-          >
-            <span className="text-3xl">{item.emoji}</span>
-            <div className='relative z-10'>
-              <p className="font-medium text-gray-800">{item.event}</p>
-              <p className="text-sm text-gray-500">{item.date}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </StoryPage>,
-
+    
     // Time Together Page
     <StoryPage key="time" backgroundColor="bg-gradient-to-br from-pink-200 to-purple-200">
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
@@ -294,6 +263,38 @@ export default function MainContent() {
           </motion.div>
         )}
       </AnimatePresence>
+    </StoryPage>,
+
+// Our Journey Page
+    <StoryPage key="journey" backgroundColor="bg-gradient-to-br from-blue-200 to-green-200">
+      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our Journey</h2>
+      <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
+        {[
+          { date: 'September, 2023', event: 'Our Journey Began', emoji: '❤️' },
+          { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
+          { date: 'Dance Event on Teachers Day', event: 'First Topic of Conversation', emoji: '🤔' },
+          { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '💝' },
+          { date: '5 Jan sharp 12 AM on My Day', event: 'Phli wish tumhri thii', emoji: '🎂' },
+          { date: '5 January, 2025', event: 'First Trip Together', emoji: '🛺' },
+          
+{ date: 'Bahut hoti thi… par har baar manaleta tha', event: 'Ladaaiyaan ', emoji: '🙃' },
+{ date: 'Is din sab khatam ho gaya.... dosti bhi aur baat bhi.. Shayad Apke liye main kuch nahi tha....', event: '24 May, 2025', emoji: '🖤' },
+   ].map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.2 }}
+            className="flex items-center space-x-4 bg-white p-4 rounded-xl shadow-md"
+          >
+            <span className="text-3xl">{item.emoji}</span>
+            <div className='relative z-10'>
+              <p className="font-medium text-gray-800">{item.event}</p>
+              <p className="text-sm text-gray-500">{item.date}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </StoryPage>,
 
     // Letter page
