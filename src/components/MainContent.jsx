@@ -119,7 +119,7 @@ export default function MainContent() {
           className="mt-6 bg-blue-500 text-white px-6 py-3 rounded-full shadow-btn hover:bg-blue-600 transition-colors duration-300"
           onClick={() => setShowVideo(true)}
         >
-          Watch Our Special Video
+          Watch your Special Video Dude
         </button>
         <motion.div
           className="mt-6"
@@ -250,7 +250,7 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
           <div className="flex flex-col gap-4">
             <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Aammm ....❤️‍🩹🎶:</p>
+              <p className="font-medium text-gray-700 mb-2"Yaarrr........❤️‍🩹:</p>
               <audio controls className="w-full">
                 <source src="/audio/audio_7692124805 (2).mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
@@ -302,11 +302,13 @@ export default function MainContent() {
       <div className="bg-white rounded-xl p-6 shadow-md overflow-y-auto flex-1 custom-scrollbar">
         <div className="relative z-10">
           <div className="text-gray-700 text-lg leading-relaxed mb-4">
-            <p>From the very first moment our paths crossed, life has felt more beautiful, more exciting, and more meaningful. Every smile, every conversation, and every memory we've shared has built a story so precious that no words can truly capture it. I feel incredibly grateful to have someone like you by my side, someone who understands me without even saying a word, someone who brings light even on the darkest days. Through ups and downs, laughter and tears, you've been a constant source of strength and happiness. As we continue to write our journey together, I want you to always remember that you are deeply cherished, endlessly appreciated, and truly loved. Here's to the countless memories we've yet to create and the beautiful future that awaits us. You are, and always will be, my favorite part of every day. 💖</p>
+            <p>From the very first moment our paths crossed, life has felt more beautiful, more exciting, and more meaningful. Every smile, every conversation, and every memory we've shared has built a story so precious that no words can truly capture it. I feel incredibly grateful to have someone like you by my side, someone who understands me without even saying a word, someone who brings light even on the darkest days. Through ups and downs, laughter and tears, you've been a constant source of strength and happiness. As we continue to write our journey together, I want you to always remember that you are deeply cherished, endlessly appreciated...... 💖
+
+And yes, whatever has been written on this website is a picture of those moments when you were a beautiful part of my life - my bestie, my own. Today circumstances have changed, so has our relationship.... Maybe now we are not the same as we used to be. If anywhere on this site I remembered you as 'Bestie', 'Forever Friend' or any such word, which you do not like today... then I seek forgiveness from the bottom of my heart for that. Every word was true at that time, but with the passage of time their meaning also changed. That's all I have to say - intentions were never bad .</p>
           </div>
           <p className="text-right text-rose-600 font-semibold">
-            Forever yours,<br />
-            Your Billu😺❤️
+            Apka Classmate,<br />
+            Mayank❤️
           </p>
         </div>
       </div>
