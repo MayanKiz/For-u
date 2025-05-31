@@ -278,7 +278,7 @@ export default function MainContent() {
           { date: '5 January, 2025', event: 'First Trip Together', emoji: '🛺' },
           
 { date: 'Bahut hoti thi… par har baar manaleta tha', event: 'Ladaaiyaan ', emoji: '🙃' },
-{ date: 'Is din sab khatam ho gaya.... dosti bhi aur baat bhi.. Shayad Apke liye main kuch nahi tha....', event: '24 May, 2025', emoji: '🖤' },
+
    ].map((item, index) => (
           <motion.div
             key={index}
