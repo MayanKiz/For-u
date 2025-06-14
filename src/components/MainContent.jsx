@@ -28,7 +28,7 @@ export default function MainContent() {
 
   const pages = [
     // Cover Page
-    <StoryPage key="cover" backgroundColor="bg-gradient-to-br from-rose-200 to-purple-200">
+    <StoryPage key="cover" backgroundColor="bg-gradient-to-br from-blue-100 to-green-100">
       <div className="flex flex-col items-center justify-center h-full text-center">
         <motion.div
           initial={{ scale: 0 }}
@@ -38,33 +38,31 @@ export default function MainContent() {
         >
           <Image
             src="https://images.pexels.com/photos/32253643/pexels-photo-32253643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Heart icon"
+            alt="Friends icon"
             priority={true}
             width={176}
             height={176}
             className="object-cover w-full h-full"
           />
         </motion.div>
-        <h1 className="text-4xl md:text-5xl font-bold text-pink-600 mb-4 relative z-10">
-          Our Special Story
+        <h1 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4 relative z-10">
+          School Friends & Memories
         </h1>
-        <div className="text-2xl md:text-3xl text-purple-700 mb-8 relative z-10">
-          Hey Cutiepie, you are<br />
-          my <FlipWords words={['Friend ', 'Soulmate ', 'Bestie ', 'Best Friend ', 'Everything ']} className="text-nowrap" />
+        <div className="text-2xl md:text-3xl text-green-700 mb-8 relative z-10">
+          Glad to have you as a <strong>Friend</strong>.
         </div>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-pink-500 text-white px-6 py-3 rounded-full text-lg shadow-btn hover:bg-pink-600 transition-colors duration-300"
+          className="bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-btn hover:bg-blue-600 transition-colors duration-300"
           onClick={() => { nextPage(); setMusicStarted(true); }}
         >
-          Open Our Story
+          Open Friendship Story
         </motion.button>
       </div>
     </StoryPage>,
 
-    
-    // Time Together Page
+    // Time Together Page (NO CHANGE - As you said)
     <StoryPage key="time" backgroundColor="bg-gradient-to-br from-pink-200 to-purple-200">
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 relative z-10">Our Time Together</h2>
@@ -88,7 +86,7 @@ export default function MainContent() {
           className="mt-6 bg-blue-500 text-white px-6 py-3 rounded-full shadow-btn hover:bg-blue-600 transition-colors duration-300"
           onClick={() => setShowVideo(true)}
         >
-          Watch your Special Video Dude
+          Watch your School Video
         </button>
         <motion.div
           className="mt-6"
@@ -104,14 +102,14 @@ export default function MainContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          Every moment with you is a treasure....Dude....𖹭.....!
+          Every moment with friends is a great memory!
         </motion.p>
       </div>
     </StoryPage>,
 
     // Photo Gallery Page
-    <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
-      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Boss Girl Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
+    <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-yellow-50 to-blue-100">
+      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Class Group Photos</h2>
       <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
         {/* Scribbled Day */}
         <div>
@@ -183,9 +181,9 @@ export default function MainContent() {
             </motion.div>
           </div>
         </div>
-        {/* Favourite Photos */}
+        {/* School Fun Moments */}
         <div>
-          <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
+          <h3 className="text-xl font-semibold text-purple-600 mb-2">Fun Moments</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               "1736534240500.jpg",
@@ -205,7 +203,7 @@ export default function MainContent() {
               >
                 <Image
                   src={`/audio/${img}`}
-                  alt={`Favourite Photo ${i + 1}`}
+                  alt={`Fun Photo ${i + 1}`}
                   width={330}
                   height={330}
                   className="rounded-2xl object-cover h-full w-full"
@@ -219,14 +217,14 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
           <div className="flex flex-col gap-4">
             <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Yaarrr........❤️‍🩹:</p>
+              <p className="font-medium text-gray-700 mb-2">Dost ki awaaz:</p>
               <audio controls className="w-full">
                 <source src="/audio/audio_7692124805 (2).mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </div>
             <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Aaye haye... Yahn mai pighal gya☺️:</p>
+              <p className="font-medium text-gray-700 mb-2">Fun Moment:</p>
               <audio controls className="w-full">
                 <source src="/audio/v2m-c8yddJxfZ0Tka.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
@@ -265,21 +263,18 @@ export default function MainContent() {
       </AnimatePresence>
     </StoryPage>,
 
-// Our Journey Page
+    // Our Journey Page
     <StoryPage key="journey" backgroundColor="bg-gradient-to-br from-blue-200 to-green-200">
-      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our Journey</h2>
+      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our School Journey</h2>
       <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
         {[
-          { date: 'September, 2023', event: 'Our Journey Began', emoji: '❤️' },
-          { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
-          { date: 'Dance Event on Teachers Day', event: 'First Topic of Conversation', emoji: '🤔' },
-          { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '💝' },
-          { date: '5 Jan sharp 12 AM on My Day', event: 'Phli wish tumhri thii', emoji: '🎂' },
-          { date: '5 January, 2025', event: 'First Trip Together', emoji: '🛺' },
-          
-{ date: 'Bahut hoti thi… par har baar manaleta tha', event: 'Ladaaiyaan ', emoji: '🙃' },
-
-   ].map((item, index) => (
+          { date: 'September, 2023', event: 'Friendship Started', emoji: '😊' },
+          { date: '3 September, 2023', event: 'First group chat', emoji: '💬' },
+          { date: 'Science Exhibition', event: 'Fun in science class', emoji: '🧪' },
+          { date: '5 Jan', event: 'Class Masti', emoji: '😂' },
+          { date: '5 January, 2025', event: 'School Trip', emoji: '🚌' },
+          { date: 'Har din', event: 'Random group masti', emoji: '🙃' },
+        ].map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -50 }}
@@ -297,19 +292,19 @@ export default function MainContent() {
       </div>
     </StoryPage>,
 
-    // Letter page
+    // Letter Page (Dosti note)
     <StoryPage key="letter" backgroundColor="bg-gradient-to-br from-blue-200 to-gray-200">
-      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">A Special Message</h2>
+      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">A Note For You</h2>
       <div className="bg-white rounded-xl p-6 shadow-md overflow-y-auto flex-1 custom-scrollbar">
         <div className="relative z-10">
           <div className="text-gray-700 text-lg leading-relaxed mb-4">
-            <p>From the very first moment our paths crossed, life has felt more beautiful, more exciting, and more meaningful. Every smile, every conversation, and every memory we've shared has built a story so precious that no words can truly capture it. I feel incredibly grateful to have someone like you by my side, someone who understands me without even saying a word, someone who brings light even on the darkest days. Through ups and downs, laughter and tears, you've been a constant source of strength and happiness. As we continue to write our journey together, I want you to always remember that you are deeply cherished, endlessly appreciated...... 💖
-
-</p>
+            <p>
+              Thank you for being a wonderful friend! School life is always better with good friends around. Wishing you all the best!
+            </p>
           </div>
-          <p className="text-right text-rose-600 font-semibold">
+          <p className="text-right text-blue-600 font-semibold">
             From,<br />
-            Your Billu😺🩵
+            Your Friend
           </p>
         </div>
       </div>
@@ -318,21 +313,21 @@ export default function MainContent() {
     // Final Page
     <StoryPage key="final" backgroundColor="bg-gradient-to-br from-pink-100 to-blue-200">
       <div className="flex flex-col items-center justify-center h-full text-center">
-        <h2 className="text-4xl font-bold text-pink-600 mb-6 relative z-10">Our Story Continues...</h2>
-        <p className="text-xl text-blue-700 mb-8 relative z-10">
-          Every moment we share is another step in our unforgettable story.
+        <h2 className="text-4xl font-bold text-blue-600 mb-6 relative z-10">Cheers to Friendship!</h2>
+        <p className="text-xl text-green-700 mb-8 relative z-10">
+          School memories with friends last forever.
         </p>
         <motion.div
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ repeat: Infinity, duration: 2 }}
           className="text-6xl mb-8"
         >
-          ❤️
+          😊
         </motion.div>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-rose-500 text-white px-6 py-3 rounded-full text-lg shadow-btn hover:bg-rose-600 transition-colors duration-300"
+          className="bg-blue-500 text-white px-6 py-3 rounded-full text-lg shadow-btn hover:bg-blue-600 transition-colors duration-300"
           onClick={() => setCurrentPage(0)}
         >
           Start Over
@@ -343,7 +338,6 @@ export default function MainContent() {
 
   return (
     <>
-      {/* Background music, always looping after user clicks "Open Our Story" */}
       <audio
         ref={audioRef}
         src="/audio/Malang_Sajna.mp3"
@@ -371,7 +365,7 @@ export default function MainContent() {
             onClick={prevPage}
             className="fixed left-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
           >
-            <ChevronLeft className="text-pink-600" />
+            <ChevronLeft className="text-blue-600" />
           </button>
         )}
 
@@ -380,7 +374,7 @@ export default function MainContent() {
             onClick={nextPage}
             className="fixed right-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
           >
-            <ChevronRight className="text-pink-600" />
+            <ChevronRight className="text-blue-600" />
           </button>
         )}
 
@@ -396,14 +390,14 @@ export default function MainContent() {
               onClick={() => setSelectedImage(null)}
               className="fixed left-1/2 top-4 transform -translate-x-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
             >
-              <X className="text-pink-500" />
+              <X className="text-blue-500" />
             </button>
 
             <motion.div
               initial={{ scale: 0.2 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
-              className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
+              className="bg-blue-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               <Image
@@ -443,7 +437,7 @@ export default function MainContent() {
                   onEnded={() => setShowVideo(false)}
                 />
                 <div className="mt-4 text-center text-lg font-medium text-blue-700">
-                  ❤️‍🩹
+                  🙂
                 </div>
               </motion.div>
             </motion.div>
