@@ -50,7 +50,7 @@ export default function MainContent() {
         </h1>
         <div className="text-2xl md:text-3xl text-purple-700 mb-8 relative z-10">
           Hey Cutiepie, you are<br />
-          my <FlipWords words={['Friend ', 'Soulmate ', 'Bestie ', 'Best Friend ', 'Everything ']} className="text-nowrap" />
+          my <FlipWords words={['Friend ', 'Bestie ', 'Best Friend  ']} className="text-nowrap" />
         </div>
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -104,14 +104,14 @@ export default function MainContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          Every moment with you is a treasure....Dude....𖹭.....!
+          Every moment with you is a treasure....!
         </motion.p>
       </div>
     </StoryPage>,
 
     // Photo Gallery Page
     <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
-      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Boss Girl Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
+      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
       <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
         {/* Scribbled Day */}
         <div>
