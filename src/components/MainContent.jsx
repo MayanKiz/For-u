@@ -37,7 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://images.pexels.com/photos/32253643/pexels-photo-32253643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://envs.sh/uu3.jpg/IMG202508166.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Heart icon"
             priority={true}
             width={176}
@@ -74,14 +74,14 @@ export default function MainContent() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <TimeCounter startDate="2023-05-06" label="The first time I saw you Madam jii.... " />
+            <TimeCounter startDate="2008-07-11" label="Kabse Aap meri bahen hai.... " />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <TimeCounter startDate="2025-01-14" label="As a Best Friend" />
+            <TimeCounter startDate="2025-08-15" label="As a Best Friend" />
           </motion.div>
         </div>
         <button
@@ -113,37 +113,10 @@ export default function MainContent() {
     <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
       <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
       <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
-        {/* Scribbled Day */}
+        
+        {/*  Group Photo */}
         <div>
-          <h3 className="text-xl font-semibold text-pink-600 mb-2">Scribbled Day</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              "1738831009732.jpg",
-              "1738831281977.jpg",
-              "1738833028885.jpg"
-            ].map((img, i) => (
-              <motion.div
-                key={img}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: i * 0.12 }}
-                className="relative aspect-square rounded-2xl overflow-hidden shadow-md cursor-pointer"
-                onClick={() => setSelectedImage(`/audio/${img}`)}
-              >
-                <Image
-                  src={`/audio/${img}`}
-                  alt={`Scribbled Day ${i + 1}`}
-                  width={330}
-                  height={330}
-                  className="rounded-2xl object-cover h-full w-full"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        {/* Class Group Photo */}
-        <div>
-          <h3 className="text-xl font-semibold text-green-600 mb-2">Class Group Photo</h3>
+          <h3 className="text-xl font-semibold text-green-600 mb-2"> Group Photo</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -153,7 +126,7 @@ export default function MainContent() {
               onClick={() => setSelectedImage("/audio/20250524_092203.jpg")}
             >
               <Image
-                src="/audio/20250524_092203.jpg"
+                src="https://envs.sh/QrT.jpg/IMG20250807160.jpg"
                 alt="Group Photo"
                 width={440}
                 height={330}
@@ -164,18 +137,18 @@ export default function MainContent() {
         </div>
         {/* Science Exhibition Image */}
         <div>
-          <h3 className="text-xl font-semibold text-blue-600 mb-2">Science Exhibition</h3>
+          <h3 className="text-xl font-semibold text-blue-600 mb-2">One of the most Beautiful pics of your </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("/audio/SmartSelect_20250525_012951_Photos.jpg")}
+              onClick={() => setSelectedImage("https://envs.sh/Qrj.jpg/IMG20250807708.jpg")}
             >
               <Image
-                src="/audio/SmartSelect_20250525_012951_Photos.jpg"
-                alt="Science Exhibition"
+                src="https://envs.sh/Qrj.jpg/IMG20250807708.jpg"
+                alt="Pookie ladki🥰"
                 width={440}
                 height={330}
                 className="rounded-2xl object-cover h-full w-full"
@@ -188,12 +161,14 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              "1736534240500.jpg",
-              "IMG-20250326-WA0002.jpg",
-              "IMG-20250326-WA0003.jpg",
-              "IMG_20241107_005917_769.jpg",
-              "IMG_20250525_023606_063.png",
-              "FreeFire_05_23_2025 17_08_25.png",
+             "https://envs.sh/Qrj.jpg/IMG20250807708.jpg",
+  "https://envs.sh/Qrv.jpg/IMG2025080746.jpg",
+  "https://envs.sh/2yu.jpg/IMG202508154.jpg",
+  "https://envs.sh/2yF.jpg/IMG20250815775.jpg",
+  "https://envs.sh/2yt.jpg/IMG20250815787.jpg",
+  "https://envs.sh/2ye.jpg/IMG20250815846.jpg",
+  "https://envs.sh/2yi.jpg/IMG20250815411.jpg",
+  "https://envs.sh/2yb.jpg/IMG2025081548.jpg",
             ].map((img, i) => (
               <motion.div
                 key={img}
@@ -270,14 +245,10 @@ export default function MainContent() {
       <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our Journey</h2>
       <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
         {[
-          { date: 'September, 2023', event: 'Our Journey Began', emoji: '❤️' },
-          { date: '3 September, 2023', event: 'First day we talked', emoji: '💬' },
-          { date: 'Dance Event on Teachers Day', event: 'First Topic of Conversation', emoji: '🤔' },
-          { date: 'Science Exhibition', event: 'Favorite time spent with you', emoji: '💝' },
-          { date: '5 Jan sharp 12 AM on My Day', event: 'Phli wish tumhri thii', emoji: '🎂' },
-          { date: '5 January, 2025', event: 'First Trip Together', emoji: '🛺' },
-          
-{ date: 'Bahut hoti thi… par har baar manaleta tha', event: 'Ladaaiyaan ', emoji: '🙃' },
+          { date: 'December 2025', event: 'Our Journey Began in chats', emoji: '❤️' },
+  { date: 'Bahut hoti hai hamariii', event: 'Mastiyaan...', emoji: '🙃' },
+  { date: '25 June 2025', event: 'First time street food together — Momos 🍜', emoji: '😋' },
+  { date: 'Always', event: 'You’re not just a friend, you’re my sister 🤍', emoji: '👭' },
 
    ].map((item, index) => (
           <motion.div
@@ -303,7 +274,10 @@ export default function MainContent() {
       <div className="bg-white rounded-xl p-6 shadow-md overflow-y-auto flex-1 custom-scrollbar">
         <div className="relative z-10">
           <div className="text-gray-700 text-lg leading-relaxed mb-4">
-            <p>From the very first moment our paths crossed, life has felt more beautiful, more exciting, and more meaningful. Every smile, every conversation, and every memory we've shared has built a story so precious that no words can truly capture it. I feel incredibly grateful to have someone like you by my side, someone who understands me without even saying a word, someone who brings light even on the darkest days. Through ups and downs, laughter and tears, you've been a constant source of strength and happiness. As we continue to write our journey together, I want you to always remember that you are deeply cherished, endlessly appreciated...... 💖
+            <p>🌸💖 Ankita, tum meri life ka ek aisa hissa ban gayi ho jo words me explain karna mushkil hai 🤗. Pehle lagta tha bas ek normal sister ho, par dheere-dheere samajh aaya ki tum toh ek dost,Bestie best friend...jaisi blessing ho 🫶✨. Kabhi hasi-mazak 😆, kabhi choti-moti ladayi 😜, aur kabhi woh long talks jo dil ko sukoon de 🩷… sab kuch special lagta hai jab tum saath ho. Tumhari ek smile hi mood fresh kar deti hai 😍, aur tumhari masti waise hi addictive hai jaise momos ka first bite 😋🥟. Dil se dua karta hoon tum hamesha khush raho 🌈, tumhare saare sapne pure ho ✨🌟 aur zindagi tumhe wohi de jo tum deserve karti ho 💯💝.
+
+Sach bolu toh, tum sister kam aur dost zyada ho 💕👭 aur ye bond meri life ka sabse precious part hai 🥰🌍.
+
 
 </p>
           </div>
