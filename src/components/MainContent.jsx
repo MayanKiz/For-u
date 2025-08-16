@@ -37,7 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://envs.sh/uu3.jpg/IMG202508166.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="https://i.imgur.com/eFNLDSY.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Heart icon"
             priority={true}
             width={176}
