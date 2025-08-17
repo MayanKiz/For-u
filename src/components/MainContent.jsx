@@ -37,7 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://i.ibb.co/ZpGRc7zn/x.jpgauto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="public/audio/file_0000000062e0622fb4bbfa436c727670.png"auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Heart icon"
             priority={true}
             width={176}
