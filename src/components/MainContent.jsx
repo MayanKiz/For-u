@@ -161,14 +161,20 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-             "https://envs.sh/Qrj.jpg/IMG20250807708.jpg",
-  "https://envs.sh/Qrv.jpg/IMG2025080746.jpg",
-  "https://envs.sh/2yu.jpg/IMG202508154.jpg",
-  "https://envs.sh/2yF.jpg/IMG20250815775.jpg",
-  "https://envs.sh/2yt.jpg/IMG20250815787.jpg",
-  "https://envs.sh/2ye.jpg/IMG20250815846.jpg",
-  "https://envs.sh/2yi.jpg/IMG20250815411.jpg",
-  "https://envs.sh/2yb.jpg/IMG2025081548.jpg",
+             "/audio/file_0000000062e0622fb4bbfa436c727670.png",
+  "/audio/SmartSelect_20250807_230528_Photos.jpg",
+  "/audio/f3e5bd21bbf14dca8bf9a86dd349bbf58902.png",
+  "/audio/Screenshot_20250807_230455_Photos.jpg",
+  "/audio/IMG-20250815-WA0009.jpg",
+  "/audio/IMG-20250815-WA0008.jpg",
+  "/audio/IMG-20250815-WA0007.jpg",
+  "/audio/IMG-20250815-WA0006.jpg",
+  "/audio/IMG-20250815-WA0005.jpg",
+  "/audio/IMG-20250815-WA0004(1).jpg",
+  "/audio/IMG-20250806-WA0000.jpg",
+  "/audio/20240819_205737.jpg",
+  "/audio/1724079255287.jpg",
+  "/audio/1723237041535~2.jpg",
             ].map((img, i) => (
               <motion.div
                 key={img}
