@@ -147,7 +147,7 @@ export default function MainContent() {
               onClick={() => setSelectedImage("https://envs.sh/Qrj.jpg/IMG20250807708.jpg")}
             >
               <Image
-                src="https://i.ibb.co/0RJ44mjL/x.jpg
+                src="https://i.ibb.co/0RJ44mjL/x.jpg"
                 alt="Pookie ladki🥰"
                 width={440}
                 height={330}
