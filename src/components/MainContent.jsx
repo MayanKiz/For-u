@@ -161,7 +161,7 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-             ""https://envs.sh/Qrj.jpg/IMG20250807708.jpg",
+             "https://envs.sh/Qrj.jpg/IMG20250807708.jpg",
   "https://envs.sh/Qrv.jpg/IMG2025080746.jpg",
   "https://envs.sh/2yu.jpg/IMG202508154.jpg",
   "https://envs.sh/2yF.jpg/IMG20250815775.jpg",
