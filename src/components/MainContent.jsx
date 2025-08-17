@@ -37,8 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://i.ibb.co/ZpGRc7zn/x.jpgauto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Heart icon"
+            src="public/audio/file_0000000062e0622fb4bbfa436c727670.png"
             priority={true}
             width={176}
             height={176}
@@ -50,7 +49,7 @@ export default function MainContent() {
         </h1>
         <div className="text-2xl md:text-3xl text-purple-700 mb-8 relative z-10">
           Hey Cutiepie, you are<br />
-          my <FlipWords words={['Friend ', 'Bestie ', 'Best Friend  ']} className="text-nowrap" />
+          my <FlipWords words={['Bestie ','sister', 'Best Friend  ']} className="text-nowrap" />
         </div>
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -81,7 +80,7 @@ export default function MainContent() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <TimeCounter startDate="2025-08-15" label="As a Best Friend" />
+            <TimeCounter startDate="2025-08-15" label="As a Best Friend kyu ki phel as a sister baat katrta tha🙂" />
           </motion.div>
         </div>
         <button
@@ -123,10 +122,10 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("https://i.ibb.co/FL2qYgMy/x.jpg.jpg")}
+              onClick={() => setSelectedImage("public/audio/1723237041535~2.jpg")}
             >
               <Image
-                src="https://i.ibb.co/FL2qYgMy/x.jpg"
+                src="public/audio/1723237041535~2.jpg"
                 alt="Group Photo"
                 width={440}
                 height={330}
