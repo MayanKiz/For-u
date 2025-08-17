@@ -60,7 +60,7 @@ export default function Cards({ setMusicPlaying, handleShowMainContent }) {
                     <QuestionCard
                         key="main-question"
                         emoji="🥰"
-                      question="Are you my bestie and will you always be?"
+                      question="Are you my sister as well as friend [bestie] and will you always be?"
                         onAnswer={(answer) => {
                             if (answer) {
                                 setCardState("yesResponse")
