@@ -37,7 +37,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="https://i.imgur.com/eFNLDSY.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src=https://i.ibb.co/ZpGRc7zn/x.jpgauto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Heart icon"
             priority={true}
             width={176}
@@ -123,10 +123,10 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("/audio/20250524_092203.jpg")}
+              onClick={() => setSelectedImage("https://i.ibb.co/FL2qYgMy/x.jpg.jpg")}
             >
               <Image
-                src="https://envs.sh/QrT.jpg/IMG20250807160.jpg"
+                src="https://i.ibb.co/FL2qYgMy/x.jpg"
                 alt="Group Photo"
                 width={440}
                 height={330}
@@ -147,7 +147,7 @@ export default function MainContent() {
               onClick={() => setSelectedImage("https://envs.sh/Qrj.jpg/IMG20250807708.jpg")}
             >
               <Image
-                src="https://envs.sh/Qrj.jpg/IMG20250807708.jpg"
+                src="https://i.ibb.co/0RJ44mjL/x.jpg
                 alt="Pookie ladki🥰"
                 width={440}
                 height={330}
@@ -161,7 +161,7 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-             "https://envs.sh/Qrj.jpg/IMG20250807708.jpg",
+             ""https://envs.sh/Qrj.jpg/IMG20250807708.jpg",
   "https://envs.sh/Qrv.jpg/IMG2025080746.jpg",
   "https://envs.sh/2yu.jpg/IMG202508154.jpg",
   "https://envs.sh/2yF.jpg/IMG20250815775.jpg",
