@@ -256,7 +256,7 @@ export default function MainContent() {
           { date: 'December 2025', event: 'Our Journey Began in chats', emoji: '❤️' },
           { date: 'Bahut hoti hai hamariii', event: 'Mastiyaan...', emoji: '🙃' },
           { date: '25 June 2025', event: 'First time street food together — Momos 🍜', emoji: '😋' },
-          { date: 'Always', event: 'You’re not just a friend, you’re my sister 🤍', emoji: '👭' },
+          { date: 'Always', event: 'You’re not just a sister, you’re my best friend 🤍', emoji: '👭' },
         ].map((item, index) => (
           <motion.div
             key={index}
@@ -282,14 +282,14 @@ export default function MainContent() {
         <div className="relative z-10">
           <div className="text-gray-700 text-lg leading-relaxed mb-4">
             <p>
-              🌸💖 Ankita, tum meri life ka ek aisa hissa ban gayi ho jo words me explain karna mushkil hai 🤗. Pehle lagta tha bas ek normal sister ho, par dheere-dheere samajh aaya ki tum toh ek dost, Bestie best friend...jaisi blessing ho 🫶✨. Kabhi hasi-mazak 😆, kabhi choti-moti ladayi 😜, aur kabhi woh long talks jo dil ko sukoon de 🩷… sab kuch special lagta hai jab tum saath ho. Tumhari ek smile hi mood fresh kar deti hai 😍, aur tumhari masti waise hi addictive hai jaise momos ka first bite 😋🥟. Dil se dua karta hoon tum hamesha khush raho 🌈, tumhare saare sapne pure ho ✨🌟 aur zindagi tumhe wohi de jo tum deserve karti ho 💯💝.
+              🌸💖 Ankita, tum meri life ka ek aisa hissa ban gayi ho jo words me explain karna mushkil hai 🤗. Pehle lagta tha bas ek normal sister ho, par dheere-dheere samajh aaya ki tum toh ek dost, Bestie best friend...jaisi blessing ho 🫶✨. Kabhi hasi-mazak 😆, kabhi choti-moti ladayi 😜, aur kabhi woh long talks jo dil ko sukoon de 🩷… sab kuch special lagta hai jab tum saath ho. Tumhari ek smile hi mood fresh kar deti hai 😍, aur tumhari masti waise hi addictive hai jaise momos ka first bite 😋🥟...... Dil se dua karta hoon tum hamesha khush raho 🌈, tumhare saare sapne pure ho ✨🌟 aur zindagi tumhe wohi de jo tum deserve karti ho 💯💝.
 
               Sach bolu toh, tum sister kam aur dost zyada ho 💕👭 aur ye bond meri life ka sabse precious part hai 🥰🌍.
             </p>
           </div>
           <p className="text-right text-rose-600 font-semibold">
             From,<br />
-            Your Billu😺🩵
+            Your bhoot👻🩵
           </p>
         </div>
       </div>
@@ -421,7 +421,7 @@ export default function MainContent() {
                 onClick={e => e.stopPropagation()}
               >
                 <video
-                  src="/audio/lv_7340057311542578438_20250508141937.mp4"
+                  src="/audio/lv_0_20250821145859.mp4"
                   controls
                   autoPlay
                   className="w-full rounded-lg"
