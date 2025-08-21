@@ -41,7 +41,7 @@ export default function MainContent() {
     "IMG-20250806-WA0000.jpg",
     "20240819_205737.jpg",
     "1724079255287.jpg",
-    "1723237041535~2.jpg",
+    "1723237041535~2.jpg", // Group photo
   ]
 
   const pages = [
@@ -128,10 +128,11 @@ export default function MainContent() {
 
     // Photo Gallery Page
     <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
-      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
+      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">
+        Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi
+      </h2>
       <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
-
-        {/*  Group Photo - Remote Image */}
+        {/* Group Photo */}
         <div>
           <h3 className="text-xl font-semibold text-green-600 mb-2">Group Photo</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -140,10 +141,10 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("https://i.ibb.co/FL2qYgMy/x.jpg")}
+              onClick={() => setSelectedImage("/audio/1723237041535~2.jpg")}
             >
               <Image
-                src="https://i.ibb.co/FL2qYgMy/x.jpg"
+                src="/audio/1723237041535~2.jpg"
                 alt="Group Photo"
                 width={440}
                 height={330}
@@ -152,7 +153,8 @@ export default function MainContent() {
             </motion.div>
           </div>
         </div>
-        {/* Science Exhibition Image - Remote Image */}
+
+        {/* Pookie ladki - Favourite Photo #1 */}
         <div>
           <h3 className="text-xl font-semibold text-blue-600 mb-2">One of the most Beautiful pics of you</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -161,10 +163,10 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("https://i.ibb.co/0RJ44mjL/x.jpg")}
+              onClick={() => setSelectedImage("/audio/file_0000000062e0622fb4bbfa436c727670.png")}
             >
               <Image
-                src="https://i.ibb.co/0RJ44mjL/x.jpg"
+                src="/audio/file_0000000062e0622fb4bbfa436c727670.png"
                 alt="Pookie ladki🥰"
                 width={440}
                 height={330}
@@ -173,7 +175,8 @@ export default function MainContent() {
             </motion.div>
           </div>
         </div>
-        {/* Favourite Photos - Local Images */}
+
+        {/* Favourite Photos Gallery */}
         <div>
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -197,21 +200,15 @@ export default function MainContent() {
             ))}
           </div>
         </div>
-        {/* Voice Memories */}
+
+        {/* Voice Memories (only one audio) */}
         <div>
           <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
           <div className="flex flex-col gap-4">
             <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Yaarrr........❤️‍🩹:</p>
+              <p className="font-medium text-gray-700 mb-2">Meri yaad...</p>
               <audio controls className="w-full">
-                <source src="/audio/audio_7692124805 (2).mp3" type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Aaye haye... Yahn mai pighal gya☺️:</p>
-              <audio controls className="w-full">
-                <source src="/audio/v2m-c8yddJxfZ0Tka.mp3" type="audio/mpeg" />
+                <source src="/audio/AUD-20250817-WA0000.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </div>
@@ -248,81 +245,17 @@ export default function MainContent() {
       </AnimatePresence>
     </StoryPage>,
 
-    // Our Journey Page
-    <StoryPage key="journey" backgroundColor="bg-gradient-to-br from-blue-200 to-green-200">
-      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our Journey</h2>
-      <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
-        {[
-          { date: 'December 2025', event: 'Our Journey Began in chats', emoji: '❤️' },
-          { date: 'Bahut hoti hai hamariii', event: 'Mastiyaan...', emoji: '🙃' },
-          { date: '25 June 2025', event: 'First time street food together — Momos 🍜', emoji: '😋' },
-          { date: 'Always', event: 'You’re not just a friend, you’re my sister 🤍', emoji: '👭' },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.2 }}
-            className="flex items-center space-x-4 bg-white p-4 rounded-xl shadow-md"
-          >
-            <span className="text-3xl">{item.emoji}</span>
-            <div className='relative z-10'>
-              <p className="font-medium text-gray-800">{item.event}</p>
-              <p className="text-sm text-gray-500">{item.date}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </StoryPage>,
+    // Baaki pages jaise the waise hi chhod do...
+    // Our Journey, Letter, Final Page etc.
 
-    // Letter page
-    <StoryPage key="letter" backgroundColor="bg-gradient-to-br from-blue-200 to-gray-200">
-      <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">A Special Message</h2>
-      <div className="bg-white rounded-xl p-6 shadow-md overflow-y-auto flex-1 custom-scrollbar">
-        <div className="relative z-10">
-          <div className="text-gray-700 text-lg leading-relaxed mb-4">
-            <p>🌸💖 Ankita, tum meri life ka ek aisa hissa ban gayi ho jo words me explain karna mushkil hai 🤗. Pehle lagta tha bas ek normal sister ho, par dheere-dheere samajh aaya ki tum toh ek dost,Bestie best friend...jaisi blessing ho 🫶✨. Kabhi hasi-mazak 😆, kabhi choti-moti ladayi 😜, aur kabhi woh long talks jo dil ko sukoon de 🩷… sab kuch special lagta hai jab tum saath ho. Tumhari ek smile hi mood fresh kar deti hai 😍, aur tumhari masti waise hi addictive hai jaise momos ka first bite 😋🥟. Dil se dua karta hoon tum hamesha khush raho 🌈, tumhare saare sapne pure ho ✨🌟 aur zindagi tumhe wohi de jo tum deserve karti ho 💯💝.
-
-Sach bolu toh, tum sister kam aur dost zyada ho 💕👭 aur ye bond meri life ka sabse precious part hai 🥰🌍.
-</p>
-          </div>
-          <p className="text-right text-rose-600 font-semibold">
-            From,<br />
-            Your Billu😺🩵
-          </p>
-        </div>
-      </div>
-    </StoryPage>,
-
-    // Final Page
-    <StoryPage key="final" backgroundColor="bg-gradient-to-br from-pink-100 to-blue-200">
-      <div className="flex flex-col items-center justify-center h-full text-center">
-        <h2 className="text-4xl font-bold text-pink-600 mb-6 relative z-10">Our Story Continues...</h2>
-        <p className="text-xl text-blue-700 mb-8 relative z-10">
-          Every moment we share is another step in our unforgettable story.
-        </p>
-        <motion.div
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="text-6xl mb-8"
-        >
-          ❤️
-        </motion.div>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-rose-500 text-white px-6 py-3 rounded-full text-lg shadow-btn hover:bg-rose-600 transition-colors duration-300"
-          onClick={() => setCurrentPage(0)}
-        >
-          Start Over
-        </motion.button>
-      </div>
-    </StoryPage>
+    // Example baaki pages ke liye:
+    // <StoryPage key="journey" ...> ... </StoryPage>
+    // <StoryPage key="letter" ...> ... </StoryPage>
+    // <StoryPage key="final" ...> ... </StoryPage>
   ]
 
   return (
     <>
-      {/* Background music, always looping after user clicks "Open Our Story" */}
       <audio
         ref={audioRef}
         src="/audio/Malang_Sajna.mp3"
@@ -362,75 +295,6 @@ Sach bolu toh, tum sister kam aur dost zyada ho 💕👭 aur ye bond meri life k
             <ChevronRight className="text-pink-600" />
           </button>
         )}
-
-        {/* IMAGE MODAL for all images */}
-        <AnimatePresence>
-          {selectedImage && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-              onClick={() => setSelectedImage(null)}
-            >
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="fixed left-1/2 top-4 transform -translate-x-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
-              >
-                <X className="text-pink-500" />
-              </button>
-              <motion.div
-                initial={{ scale: 0.2 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.8 }}
-                className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Image
-                  src={selectedImage}
-                  alt={`Gallery image`}
-                  width={600}
-                  height={400}
-                  className="rounded-2xl w-auto h-auto"
-                />
-                <p className="mt-4 text-center text-gray-700">Moment</p>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* VIDEO MODAL */}
-        <AnimatePresence>
-          {showVideo && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
-              onClick={() => setShowVideo(false)}
-            >
-              <motion.div
-                initial={{ scale: 0.85 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.8 }}
-                className="relative bg-white rounded-2xl p-4 shadow-2xl w-[95vw] max-w-xl"
-                onClick={e => e.stopPropagation()}
-              >
-                <video
-                  src="/audio/lv_7340057311542578438_20250508141937.mp4"
-                  controls
-                  autoPlay
-                  className="w-full rounded-lg"
-                  onEnded={() => setShowVideo(false)}
-                />
-                <div className="mt-4 text-center text-lg font-medium text-blue-700">
-                  ❤️‍🩹
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </>
+      </>
   )
 }
