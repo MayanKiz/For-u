@@ -26,7 +26,6 @@ export default function MainContent() {
   const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, pages.length - 1))
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 0))
 
-  // Local images (in /public/audio/)
   const localImages = [
     "file_0000000062e0622fb4bbfa436c727670.png",
     "SmartSelect_20250807_230528_Photos.jpg",
@@ -41,7 +40,7 @@ export default function MainContent() {
     "IMG-20250806-WA0000.jpg",
     "20240819_205737.jpg",
     "1724079255287.jpg",
-    "1723237041535~2.jpg", // Group photo
+    "1723237041535~2.jpg",
   ]
 
   const pages = [
@@ -154,7 +153,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        {/* Pookie ladki - Favourite Photo #1 */}
+        {/* Favourite Photo */}
         <div>
           <h3 className="text-xl font-semibold text-blue-600 mb-2">One of the most Beautiful pics of you</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -176,7 +175,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        {/* Favourite Photos Gallery */}
+        {/* Favourite Photos */}
         <div>
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -201,7 +200,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        {/* Voice Memories (only one audio) */}
+        {/* Voice Memories */}
         <div>
           <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
           <div className="flex flex-col gap-4">
@@ -215,6 +214,7 @@ export default function MainContent() {
           </div>
         </div>
       </div>
+
       {/* IMAGE MODAL */}
       <AnimatePresence>
         {selectedImage && (
@@ -243,15 +243,7 @@ export default function MainContent() {
           </motion.div>
         )}
       </AnimatePresence>
-    </StoryPage>,
-
-    // Baaki pages jaise the waise hi chhod do...
-    // Our Journey, Letter, Final Page etc.
-
-    // Example baaki pages ke liye:
-    // <StoryPage key="journey" ...> ... </StoryPage>
-    // <StoryPage key="letter" ...> ... </StoryPage>
-    // <StoryPage key="final" ...> ... </StoryPage>
+    </StoryPage>
   ]
 
   return (
@@ -270,7 +262,7 @@ export default function MainContent() {
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
               className="absolute"
             >
-              <HeartIcon size={200} className='fill-pink-100 stroke-none' />
+              <HeartIcon size={200} className="fill-pink-100 stroke-none" />
             </motion.div>
             <AnimatePresence mode="wait">
               {pages[currentPage]}
@@ -295,6 +287,7 @@ export default function MainContent() {
             <ChevronRight className="text-pink-600" />
           </button>
         )}
-      </>
+      </div>
+    </>
   )
 }
