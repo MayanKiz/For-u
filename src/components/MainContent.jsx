@@ -28,7 +28,7 @@ export default function MainContent() {
 
   const localImages = [
     "file_0000000062e0622fb4bbfa436c727670.png",
-    "SmartSelect_20250807_230528_Photos.jpg",
+    
     "f3e5bd21bbf14dca8bf9a86dd349bbf58902.png",
     "Screenshot_20250807_230455_Photos.jpg",
     "IMG-20250815-WA0009.jpg",
@@ -53,7 +53,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="/audio/file_0000000062e0622fb4bbfa436c727670.png"
+            src="/audio/f3e5bd21bbf14dca8bf9a86dd349bbf58902.png"
             alt="Heart icon"
             priority={true}
             width={176}
@@ -164,7 +164,7 @@ export default function MainContent() {
               onClick={() => setSelectedImage("/audio/Screenshot_20250807_230455_Photos.jpg")}
             >
               <Image
-                src="/audio/Screenshot_20250807_230455_Photos.jpg"
+                src="/audio/IMG-20250806-WA0000.jpg"
                 alt="Pookie ladki🥰"
                 width={440}
                 height={330}
@@ -204,7 +204,7 @@ export default function MainContent() {
           <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
           <div className="flex flex-col gap-4">
             <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Meri yaad...</p>
+              <p className="font-medium text-gray-700 mb-2">woow so cutee and melodious..</p>
               <audio controls className="w-full">
                 <source src="/audio/AUD-20250817-WA0000.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
