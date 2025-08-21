@@ -27,8 +27,6 @@ export default function MainContent() {
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 0))
 
   const localImages = [
-    
-    
     "f3e5bd21bbf14dca8bf9a86dd349bbf58902.png",
     "Screenshot_20250807_230455_Photos.jpg",
     "IMG-20250815-WA0009.jpg",
@@ -38,8 +36,6 @@ export default function MainContent() {
     "IMG-20250815-WA0005.jpg",
     "IMG-20250815-WA0004(1).jpg",
     "IMG-20250806-WA0000.jpg",
-  
-    
   ]
 
   const pages = [
@@ -130,6 +126,7 @@ export default function MainContent() {
         Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi
       </h2>
       <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
+
         {/* Group Photo */}
         <div>
           <h3 className="text-xl font-semibold text-green-600 mb-2">Group Photo</h3>
@@ -161,7 +158,7 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("/audio/Screenshot_20250807_230455_Photos.jpg")}
+              onClick={() => setSelectedImage("/audio/IMG-20250806-WA0000.jpg")}
             >
               <Image
                 src="/audio/IMG-20250806-WA0000.jpg"
@@ -242,7 +239,7 @@ export default function MainContent() {
           </motion.div>
         )}
       </AnimatePresence>
-    </StoryPage>
+    </StoryPage>,
   ]
 
   return (
@@ -263,9 +260,7 @@ export default function MainContent() {
             >
               <HeartIcon size={200} className="fill-pink-100 stroke-none" />
             </motion.div>
-            <AnimatePresence mode="wait">
-              {pages[currentPage]}
-            </AnimatePresence>
+            <AnimatePresence mode="wait">{pages[currentPage]}</AnimatePresence>
           </div>
         </div>
 
