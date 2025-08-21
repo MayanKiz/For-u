@@ -26,10 +26,7 @@ export default function MainContent() {
   const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, pages.length - 1))
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 0))
 
-  // Local images (in /public/audio/)
   const localImages = [
-    "file_0000000062e0622fb4bbfa436c727670.png",
-    "SmartSelect_20250807_230528_Photos.jpg",
     "f3e5bd21bbf14dca8bf9a86dd349bbf58902.png",
     "Screenshot_20250807_230455_Photos.jpg",
     "IMG-20250815-WA0009.jpg",
@@ -39,9 +36,6 @@ export default function MainContent() {
     "IMG-20250815-WA0005.jpg",
     "IMG-20250815-WA0004(1).jpg",
     "IMG-20250806-WA0000.jpg",
-    "20240819_205737.jpg",
-    "1724079255287.jpg",
-    "1723237041535~2.jpg",
   ]
 
   const pages = [
@@ -55,7 +49,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="/audio/file_0000000062e0622fb4bbfa436c727670.png"
+            src="/audio/f3e5bd21bbf14dca8bf9a86dd349bbf58902.png"
             alt="Heart icon"
             priority={true}
             width={176}
@@ -128,10 +122,12 @@ export default function MainContent() {
 
     // Photo Gallery Page
     <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
-      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
+      <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">
+        Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi
+      </h2>
       <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
 
-        {/*  Group Photo - Remote Image */}
+        {/* Group Photo */}
         <div>
           <h3 className="text-xl font-semibold text-green-600 mb-2">Group Photo</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -140,10 +136,10 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("https://i.ibb.co/FL2qYgMy/x.jpg")}
+              onClick={() => setSelectedImage("/audio/1723237041535~2.jpg")}
             >
               <Image
-                src="https://i.ibb.co/FL2qYgMy/x.jpg"
+                src="/audio/1723237041535~2.jpg"
                 alt="Group Photo"
                 width={440}
                 height={330}
@@ -152,7 +148,8 @@ export default function MainContent() {
             </motion.div>
           </div>
         </div>
-        {/* Science Exhibition Image - Remote Image */}
+
+        {/* Favourite Photo */}
         <div>
           <h3 className="text-xl font-semibold text-blue-600 mb-2">One of the most Beautiful pics of you</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -161,10 +158,10 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("https://i.ibb.co/0RJ44mjL/x.jpg")}
+              onClick={() => setSelectedImage("/audio/IMG-20250806-WA0000.jpg")}
             >
               <Image
-                src="https://i.ibb.co/0RJ44mjL/x.jpg"
+                src="/audio/IMG-20250806-WA0000.jpg"
                 alt="Pookie ladki🥰"
                 width={440}
                 height={330}
@@ -173,7 +170,8 @@ export default function MainContent() {
             </motion.div>
           </div>
         </div>
-        {/* Favourite Photos - Local Images */}
+
+        {/* Favourite Photos */}
         <div>
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -197,27 +195,22 @@ export default function MainContent() {
             ))}
           </div>
         </div>
+
         {/* Voice Memories */}
         <div>
           <h3 className="text-xl font-semibold text-red-600 mb-2">Voice Memories</h3>
           <div className="flex flex-col gap-4">
             <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Yaarrr........❤️‍🩹:</p>
+              <p className="font-medium text-gray-700 mb-2">woow so cutee and melodious..</p>
               <audio controls className="w-full">
-                <source src="/audio/audio_7692124805 (2).mp3" type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div className="p-4 bg-white shadow-md rounded-2xl">
-              <p className="font-medium text-gray-700 mb-2">Aaye haye... Yahn mai pighal gya☺️:</p>
-              <audio controls className="w-full">
-                <source src="/audio/v2m-c8yddJxfZ0Tka.mp3" type="audio/mpeg" />
+                <source src="/audio/AUD-20250817-WA0000.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </div>
           </div>
         </div>
       </div>
+
       {/* IMAGE MODAL */}
       <AnimatePresence>
         {selectedImage && (
@@ -228,20 +221,27 @@ export default function MainContent() {
             className="fixed inset-0 z-[999] flex items-center justify-center bg-black bg-opacity-90"
             onClick={() => setSelectedImage(null)}
           >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="fixed left-1/2 top-4 transform -translate-x-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-50"
+            >
+              <X className="text-pink-500" />
+            </button>
             <motion.div
-              initial={{ scale: 0.9 }}
+              initial={{ scale: 0.2 }}
               animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              className="bg-white rounded-2xl p-2 shadow-2xl w-[95vw] max-w-2xl"
-              onClick={e => e.stopPropagation()}
+              exit={{ scale: 0.8 }}
+              className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
             >
               <Image
                 src={selectedImage}
                 alt="Selected"
-                width={800}
-                height={600}
-                className="w-full rounded-xl object-contain"
+                width={600}
+                height={400}
+                className="rounded-2xl w-auto h-auto"
               />
+              <p className="mt-4 text-center text-gray-700">Moment</p>
             </motion.div>
           </motion.div>
         )}
@@ -338,45 +338,48 @@ export default function MainContent() {
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
               className="absolute"
             >
-              <HeartIcon size={200} className='fill-pink-100 stroke-none' />
+              <HeartIcon size={200} className="fill-pink-100 stroke-none" />
             </motion.div>
-            <AnimatePresence mode="wait">
-              {pages[currentPage]}
-            </AnimatePresence>
+            <AnimatePresence mode="wait">{pages[currentPage]}</AnimatePresence>
           </div>
         </div>
 
+        {/* Left Arrow */}
         {currentPage > 0 && (
           <button
             onClick={prevPage}
-            className="fixed left-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
+            className="fixed left-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/80 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-50"
+            aria-label="Previous Page"
           >
             <ChevronLeft className="text-pink-600" />
           </button>
         )}
 
+        {/* Right Arrow */}
         {currentPage < pages.length - 1 && (
           <button
             onClick={nextPage}
-            className="fixed right-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
+            className="fixed right-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/80 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-50"
+            aria-label="Next Page"
           >
             <ChevronRight className="text-pink-600" />
           </button>
         )}
 
-        {/* IMAGE MODAL for all images */}
+        {/* IMAGE MODAL */}
         <AnimatePresence>
           {selectedImage && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-90"
               onClick={() => setSelectedImage(null)}
             >
               <button
                 onClick={() => setSelectedImage(null)}
-                className="fixed left-1/2 top-4 transform -translate-x-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
+                className="fixed left-1/2 top-4 transform -translate-x-1/2 p-3 bg-white/80 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-50"
+                aria-label="Close Image Modal"
               >
                 <X className="text-pink-500" />
               </button>
@@ -384,15 +387,15 @@ export default function MainContent() {
                 initial={{ scale: 0.2 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}
-                className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
+                className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-[90vw] max-h-[90vh] overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Image
                   src={selectedImage}
-                  alt={`Gallery image`}
-                  width={600}
-                  height={400}
-                  className="rounded-2xl w-auto h-auto"
+                  alt="Selected"
+                  width={800}
+                  height={600}
+                  className="rounded-2xl w-auto h-auto max-w-full max-h-full"
                 />
                 <p className="mt-4 text-center text-gray-700">Moment</p>
               </motion.div>
@@ -407,7 +410,7 @@ export default function MainContent() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+              className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-80"
               onClick={() => setShowVideo(false)}
             >
               <motion.div
