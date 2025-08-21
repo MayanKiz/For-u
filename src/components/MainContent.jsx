@@ -27,7 +27,7 @@ export default function MainContent() {
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 0))
 
   const localImages = [
-    "file_0000000062e0622fb4bbfa436c727670.png",
+    
     
     "f3e5bd21bbf14dca8bf9a86dd349bbf58902.png",
     "Screenshot_20250807_230455_Photos.jpg",
