@@ -26,6 +26,24 @@ export default function MainContent() {
   const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, pages.length - 1))
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 0))
 
+  // Local images (in /public/audio/)
+  const localImages = [
+    "file_0000000062e0622fb4bbfa436c727670.png",
+    "SmartSelect_20250807_230528_Photos.jpg",
+    "f3e5bd21bbf14dca8bf9a86dd349bbf58902.png",
+    "Screenshot_20250807_230455_Photos.jpg",
+    "IMG-20250815-WA0009.jpg",
+    "IMG-20250815-WA0008.jpg",
+    "IMG-20250815-WA0007.jpg",
+    "IMG-20250815-WA0006.jpg",
+    "IMG-20250815-WA0005.jpg",
+    "IMG-20250815-WA0004(1).jpg",
+    "IMG-20250806-WA0000.jpg",
+    "20240819_205737.jpg",
+    "1724079255287.jpg",
+    "1723237041535~2.jpg",
+  ]
+
   const pages = [
     // Cover Page
     <StoryPage key="cover" backgroundColor="bg-gradient-to-br from-rose-200 to-purple-200">
@@ -37,7 +55,7 @@ export default function MainContent() {
           className="w-44 h-44 mb-8 rounded-full overflow-hidden shadow-md"
         >
           <Image
-            src="public/audio/file_0000000062e0622fb4bbfa436c727670.png"auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src="/audio/file_0000000062e0622fb4bbfa436c727670.png"
             alt="Heart icon"
             priority={true}
             width={176}
@@ -63,7 +81,6 @@ export default function MainContent() {
       </div>
     </StoryPage>,
 
-    
     // Time Together Page
     <StoryPage key="time" backgroundColor="bg-gradient-to-br from-pink-200 to-purple-200">
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
@@ -113,17 +130,17 @@ export default function MainContent() {
     <StoryPage key="gallery" backgroundColor="bg-gradient-to-br from-blue-50 to-cyan-100">
       <h2 className="text-3xl font-bold text-indigo-600 mb-6 relative z-10">Some Beautiful Moments – Because Ordinary Toh Tum Kabhi Thi Hi Nahi</h2>
       <div className="flex flex-col gap-8 pb-4 overflow-y-auto flex-1 pr-2">
-        
-        {/*  Group Photo */}
+
+        {/*  Group Photo - Remote Image */}
         <div>
-          <h3 className="text-xl font-semibold text-green-600 mb-2"> Group Photo</h3>
+          <h3 className="text-xl font-semibold text-green-600 mb-2">Group Photo</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("https://i.ibb.co/FL2qYgMy/x.jpg.jpg")}
+              onClick={() => setSelectedImage("https://i.ibb.co/FL2qYgMy/x.jpg")}
             >
               <Image
                 src="https://i.ibb.co/FL2qYgMy/x.jpg"
@@ -135,16 +152,16 @@ export default function MainContent() {
             </motion.div>
           </div>
         </div>
-        {/* Science Exhibition Image */}
+        {/* Science Exhibition Image - Remote Image */}
         <div>
-          <h3 className="text-xl font-semibold text-blue-600 mb-2">One of the most Beautiful pics of your </h3>
+          <h3 className="text-xl font-semibold text-blue-600 mb-2">One of the most Beautiful pics of you</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("https://envs.sh/Qrj.jpg/IMG20250807708.jpg")}
+              onClick={() => setSelectedImage("https://i.ibb.co/0RJ44mjL/x.jpg")}
             >
               <Image
                 src="https://i.ibb.co/0RJ44mjL/x.jpg"
@@ -156,26 +173,11 @@ export default function MainContent() {
             </motion.div>
           </div>
         </div>
-        {/* Favourite Photos */}
+        {/* Favourite Photos - Local Images */}
         <div>
           <h3 className="text-xl font-semibold text-purple-600 mb-2">My Favourite Photos</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-             "/audio/file_0000000062e0622fb4bbfa436c727670.png",
-  "/audio/SmartSelect_20250807_230528_Photos.jpg",
-  "/audio/f3e5bd21bbf14dca8bf9a86dd349bbf58902.png",
-  "/audio/Screenshot_20250807_230455_Photos.jpg",
-  "/audio/IMG-20250815-WA0009.jpg",
-  "/audio/IMG-20250815-WA0008.jpg",
-  "/audio/IMG-20250815-WA0007.jpg",
-  "/audio/IMG-20250815-WA0006.jpg",
-  "/audio/IMG-20250815-WA0005.jpg",
-  "/audio/IMG-20250815-WA0004(1).jpg",
-  "/audio/IMG-20250806-WA0000.jpg",
-  "/audio/20240819_205737.jpg",
-  "/audio/1724079255287.jpg",
-  "/audio/1723237041535~2.jpg",
-            ].map((img, i) => (
+            {localImages.map((img, i) => (
               <motion.div
                 key={img}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -246,17 +248,16 @@ export default function MainContent() {
       </AnimatePresence>
     </StoryPage>,
 
-// Our Journey Page
+    // Our Journey Page
     <StoryPage key="journey" backgroundColor="bg-gradient-to-br from-blue-200 to-green-200">
       <h2 className="text-3xl font-bold text-blue-600 mb-6 relative z-10">Our Journey</h2>
       <div className="space-y-4 flex-1 overflow-y-auto overflow-x-hidden rounded-xl custom-scrollbar">
         {[
           { date: 'December 2025', event: 'Our Journey Began in chats', emoji: '❤️' },
-  { date: 'Bahut hoti hai hamariii', event: 'Mastiyaan...', emoji: '🙃' },
-  { date: '25 June 2025', event: 'First time street food together — Momos 🍜', emoji: '😋' },
-  { date: 'Always', event: 'You’re not just a friend, you’re my sister 🤍', emoji: '👭' },
-
-   ].map((item, index) => (
+          { date: 'Bahut hoti hai hamariii', event: 'Mastiyaan...', emoji: '🙃' },
+          { date: '25 June 2025', event: 'First time street food together — Momos 🍜', emoji: '😋' },
+          { date: 'Always', event: 'You’re not just a friend, you’re my sister 🤍', emoji: '👭' },
+        ].map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -50 }}
@@ -283,8 +284,6 @@ export default function MainContent() {
             <p>🌸💖 Ankita, tum meri life ka ek aisa hissa ban gayi ho jo words me explain karna mushkil hai 🤗. Pehle lagta tha bas ek normal sister ho, par dheere-dheere samajh aaya ki tum toh ek dost,Bestie best friend...jaisi blessing ho 🫶✨. Kabhi hasi-mazak 😆, kabhi choti-moti ladayi 😜, aur kabhi woh long talks jo dil ko sukoon de 🩷… sab kuch special lagta hai jab tum saath ho. Tumhari ek smile hi mood fresh kar deti hai 😍, aur tumhari masti waise hi addictive hai jaise momos ka first bite 😋🥟. Dil se dua karta hoon tum hamesha khush raho 🌈, tumhare saare sapne pure ho ✨🌟 aur zindagi tumhe wohi de jo tum deserve karti ho 💯💝.
 
 Sach bolu toh, tum sister kam aur dost zyada ho 💕👭 aur ye bond meri life ka sabse precious part hai 🥰🌍.
-
-
 </p>
           </div>
           <p className="text-right text-rose-600 font-semibold">
@@ -364,39 +363,41 @@ Sach bolu toh, tum sister kam aur dost zyada ho 💕👭 aur ye bond meri life k
           </button>
         )}
 
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-            onClick={() => setSelectedImage(null)}
-          >
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="fixed left-1/2 top-4 transform -translate-x-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
-            >
-              <X className="text-pink-500" />
-            </button>
-
+        {/* IMAGE MODAL for all images */}
+        <AnimatePresence>
+          {selectedImage && (
             <motion.div
-              initial={{ scale: 0.2 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+              onClick={() => setSelectedImage(null)}
             >
-              <Image
-                src={`https://imag823/pexels-photo-1759823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`}
-                alt={`Gallery image ${selectedImage}`}
-                width={300}
-                height={250}
-                className="rounded-2xl w-auto h-auto"
-              />
-              <p className="mt-4 text-center text-gray-700">Moment {selectedImage}</p>
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="fixed left-1/2 top-4 transform -translate-x-1/2 p-3 bg-white/50 rounded-full shadow-md hover:bg-white transition-colors duration-300 z-40"
+              >
+                <X className="text-pink-500" />
+              </button>
+              <motion.div
+                initial={{ scale: 0.2 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.8 }}
+                className="bg-pink-50 p-4 rounded-3xl shadow-2xl max-w-fit w-full h-max overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Image
+                  src={selectedImage}
+                  alt={`Gallery image`}
+                  width={600}
+                  height={400}
+                  className="rounded-2xl w-auto h-auto"
+                />
+                <p className="mt-4 text-center text-gray-700">Moment</p>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
+          )}
+        </AnimatePresence>
 
         {/* VIDEO MODAL */}
         <AnimatePresence>
