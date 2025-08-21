@@ -38,9 +38,8 @@ export default function MainContent() {
     "IMG-20250815-WA0005.jpg",
     "IMG-20250815-WA0004(1).jpg",
     "IMG-20250806-WA0000.jpg",
-    "20240819_205737.jpg",
-    "1724079255287.jpg",
-    "1723237041535~2.jpg",
+  
+    
   ]
 
   const pages = [
@@ -162,10 +161,10 @@ export default function MainContent() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.12 }}
               className="relative aspect-video rounded-2xl overflow-hidden shadow-md cursor-pointer"
-              onClick={() => setSelectedImage("/audio/file_0000000062e0622fb4bbfa436c727670.png")}
+              onClick={() => setSelectedImage("/audio/Screenshot_20250807_230455_Photos.jpg")}
             >
               <Image
-                src="/audio/file_0000000062e0622fb4bbfa436c727670.png"
+                src="/audio/Screenshot_20250807_230455_Photos.jpg"
                 alt="Pookie ladki🥰"
                 width={440}
                 height={330}
